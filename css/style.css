@@ -702,11 +702,6 @@ header.navbar {
         padding: 22.298px;
     }
 }
-@media (min-width: 300px) and (max-width: 1200px) {
-    .ftr-list-img {
-        margin-left: 30px;
-    }
-}
 @media (max-width: 550px) {
     .ftr-list-txt {
         font-size: 13px;
@@ -1424,11 +1419,23 @@ header.navbar {
 /*************************** Footer Styles ******************************/
 /************************************************************************/
 
+footer {
+    background-color: #0a3153;
+    color: #fff;
+}
 footer .row {
-    margin: 15px auto;
+    display: table;
+    margin: 0 auto;
+    padding: 15px 0;
+}
+footer ul.footer-links {
+    padding-left: 0px;
+    text-align: center;
 }
 footer li {
     border-right: 1px solid white;
+    display: inline; 
+    padding: 1px 10px;
 }
 footer li:last-of-type {
     border-right: none;
@@ -1443,21 +1450,7 @@ footer li a:hover {
     padding-bottom: 3px;
     text-decoration: none;
 }
-#footer {
-    background-color: #0a3153;
-    color: rgba(255, 255, 255, 0.3);
-}
-.footer-links {
-    background-color: #0a3153;
-    color: rgba(255, 255, 255, 0.3);
-    width: 560px;
-    margin: 0 auto;
-}
-footer li {
-    padding: 1px 10px;
-    display: inline-block;
-    float: left;
-}
+
 /************************************************************************/
 /************************* Footer Media Queries *************************/
 /************************************************************************/
@@ -1473,10 +1466,11 @@ footer li {
 @media (max-width: 480px) {
     footer .footer-links {
         float: none;
+        padding-left: 0px;
         width: auto;
     }
     footer li {
-        padding: 10px;
+        padding: 20px;
         float: none;
         display: block;
         width: 100%;
