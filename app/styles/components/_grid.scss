@@ -1,0 +1,81 @@
+// Default grid is 20 columns
+// Use scss mixins to make the grid happen as necessary for different components
+
+// Grid for header area
+header section {
+  @include make-row();
+
+  .logo {
+    @include make-sm-column(10);
+    @include make-md-column(12);
+    @include make-lg-column(14);
+  }
+
+  .utility {
+    @include make-sm-column(10);
+    @include make-md-column(8);
+    @include make-lg-column(6);
+  }
+}
+
+// Grid for the banner image
+.dao-banner-image-container {
+  @include make-row();
+
+  .dao-banner-image-content {
+    @include make-sm-column(20);
+  }
+}
+
+// Grid for features section
+.dao-feature-container {
+  @include make-row();
+
+  .dao-feature-inspiration, .dao-feature-health, .dao-feature-success {
+    @include make-xs-column(20);
+    @include make-sm-column(6);
+  }
+
+  .dao-feature-inspiration {
+    @include make-sm-column-offset(1);
+  }
+}
+
+// Grid for explore section
+.dao-explore-container-1, .dao-explore-container-2  {
+  @include make-row();
+
+  .dao-explore-unit-1, .dao-explore-unit-2, .dao-explore-unit-3, .dao-explore-unit-4 {
+    @include make-xs-column(16);
+    @include make-xs-column-offset(2);
+    @include make-sm-column(8.5);
+    @include make-sm-column-offset(1);
+  }
+}
+
+// Grid for explore section
+.dao-explore-container-1, .dao-explore-container-2  {
+  @include make-row();
+
+  .dao-explore-unit-1, .dao-explore-unit-2, .dao-explore-unit-3, .dao-explore-unit-4 {
+    @include make-xs-column(16);
+    @include make-xs-column-offset(2);
+    @include make-sm-column(8.5);
+    @include make-sm-column-offset(1);
+  }
+}
+
+// Grid for geopro section
+.dao-geopro-container {
+  //@include make-row();
+
+  .dao-geopro-1, .dao-geopro-2, .dao-geopro-3, .dao-geopro-4 {
+    //@include make-xs-column(8);
+    //@include make-xs-column-offset(1);
+    //@include make-sm-column(4);
+  }
+
+  .dao-geopro-1 {
+    //@include make-sm-column-offset(2);
+  }
+}
