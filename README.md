@@ -19,9 +19,9 @@ Since we are using the Yeoman generator, I'm copying it's features into this rep
 
 ## Getting Started
 
-Again, this comes straight from the Yeoman generator page:
+Again, this comes straight from the Yeoman generator page. I added in some stuff to make handlebars templates work.
 
-- Install dependencies: `npm install --global yo gulp bower`
+- Install dependencies: `npm install --global yo gulp bower handlebars`
 - Install the generator: `npm install --global generator-gulp-webapp`
 - Run `yo gulp-webapp` to scaffold your webapp
 - Run `gulp serve` to preview and watch for changes
