@@ -1,0 +1,225 @@
+.dao-banner-image-container .dao-banner-image-content {
+  padding: 0;
+  margin-top: 60px;
+
+  @media (min-width: $screen-md-min) {
+    margin-top: 80px;
+  }
+}
+
+.dao-banner-text-container {
+  color: $brand-white;
+  margin: 0 auto;
+  position: absolute;
+  top: 10%;
+  text-align: center;
+  width: 100%;
+  z-index: 2;
+
+  @media (min-width: $screen-xs-min) {
+    top: 11%;
+  }
+
+  @media (min-width: $screen-sm-min) {
+    top: 16%;
+  }
+
+  @media (min-width: $screen-md-min) {
+    top: 20%;
+  }
+
+  .dao-banner-text-intro {
+    text-transform: uppercase;
+
+    span {
+      padding: 0 2px;
+    }
+  }
+
+  .dao-banner-text-subhead {
+    font-size: $norm;
+    margin: 28px 0 12px 0;
+
+    @media (min-width: $screen-lg-min) {
+      margin: 84px 0 16px 0;
+    }
+  }
+
+  h1 {
+    color: $brand-white;
+    font-size: $xxxlarge;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+
+  .btn-cta-kerning {
+    margin-left: 4px;
+  }
+
+  .btn-cta-kerning span {
+    padding: 0 0.5%;
+  }
+}
+
+.dao-feature-container {
+  background-color: $brand-dark-white;
+  text-align: center;
+  padding-bottom: 60px;
+
+  .dao-feature-inspiration-icon, .dao-feature-health-icon, .dao-feature-success-icon {
+    display: inline-block;
+    margin: 60px 0 0 0;
+
+    @media (min-width: $screen-sm-min) {
+      margin: 60px 0 20px 0;
+    }
+  }
+
+  img {
+    height: 50px;
+    width: 50px;
+  }
+
+  h2 {
+    font-size: $med;
+    line-height: 1.3;
+    margin-top: 15px;
+
+    @media (min-width: $screen-sm-min) {
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+  }
+
+  .dao-feature-inspiration-subhead, .dao-feature-health-subhead, .dao-feature-success-subhead {
+    color: $brand-dark-gray4;
+    margin: 0 auto 10px auto;
+    max-width: 210px;
+    min-height: 45px;
+
+    @media (min-width: $screen-sm-min) {
+      margin: 0 auto;
+      min-height: 85px;
+    }
+  }
+
+  .green-text {
+    display: block;
+
+    @media (min-width: $screen-md-min) {
+      display: inline;
+    }
+  }
+}
+
+.dao-explore-container {
+  padding: 30px 0;
+
+  h3 {
+    color: $brand-white;
+    max-width: 250px;
+  }
+
+  h4 {
+    color: $brand-white;
+    line-height: 1.3;
+  }
+
+  .btn-default, .btn-default:hover {
+    border: 1px solid $brand-white;
+  }
+
+  a.btn-default, a:visited.btn-default, a:active.btn-default {
+    color: $brand-white;
+  }
+
+  .dao-explore-unit {
+    color: $brand-white;
+    min-height: 259px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+
+  .dao-explore-unit-1 {
+    background: url('../../images/explore/girl-on-grass.jpg') top center no-repeat;
+
+    // Flips background image to better show people for mobile
+    @media (max-width: $screen-xs-min) {
+      -moz-transform: scaleX(-1);
+      -o-transform: scaleX(-1);
+      -webkit-transform: scaleX(-1);
+      transform: scaleX(-1);
+    }
+
+    // Unflips the content in the .dao-explore-unit-# containers
+    .dao-explore-unit-1-content, .dao-explore-unit-1-title, .dao-explore-unit-1-button {
+      @media (max-width: $screen-xs-min) {
+        max-width: none;
+        -moz-transform: scaleX(-1);
+        -o-transform: scaleX(-1);
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+      }
+    }
+  }
+
+  .dao-explore-unit-2 {
+    background: url('../../images/explore/people-tent.jpg') top center no-repeat;
+  }
+
+  .dao-explore-unit-3 {
+    background: url('../../images/explore/carrot-girl.jpg') top center no-repeat;
+
+    // Flips background image to better show people for mobile
+    @media (max-width: $screen-xs-min) {
+      -moz-transform: scaleX(-1);
+      -o-transform: scaleX(-1);
+      -webkit-transform: scaleX(-1);
+      transform: scaleX(-1);
+    }
+
+    // Unflips the content in the .dao-explore-unit-# containers
+    .dao-explore-unit-3-content, .dao-explore-unit-3-title, .dao-explore-unit-3-button {
+      @media (max-width: $screen-xs-min) {
+        max-width: none;
+        -moz-transform: scaleX(-1);
+        -o-transform: scaleX(-1);
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+      }
+    }
+  }
+
+  .dao-explore-unit-4 {
+    background: url('../../images/explore/chiropractic-woman.jpg') top center no-repeat;
+  }
+
+  .dao-explore-unit-1-content, .dao-explore-unit-2-content, .dao-explore-unit-3-content, .dao-explore-unit-4-content {
+    max-width: 350px;
+  }
+}
+
+.dao-geopro-container {
+  background-color: $brand-dark-white;
+  margin-left: -15px;
+  margin-right: -15px;
+  text-align: center;
+  padding: 30px 0 60px 0;
+
+  .dao-geopro-1, .dao-geopro-2, .dao-geopro-3, .dao-geopro-4 {
+    background-color: $brand-true-white;
+    display: inline-block;
+    min-height: 200px;
+    min-width: 200px;
+    padding: 30px;
+    margin: 10px;
+  }
+
+  hr {
+    width: 50px;
+  }
+
+  h3 {
+    font-size: $norm;
+  }
+}
