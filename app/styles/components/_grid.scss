@@ -1,81 +1,110 @@
-// Default grid is 20 columns
-// Use scss mixins to make the grid happen as necessary for different components
+// Site Grid
+// Using scss bootstrap mixins to make the grid happen as necessary for different components
+// See more here: https://github.com/twbs/bootstrap-sass/blob/master/assets/stylesheets/bootstrap/mixins/_grid.scss
 
+//######################################
+//############# How to Use #############
+//######################################
+// Step 1 - Create bootstrap container in markup (ie: <div class="container"> or <div class="container-fluid")
+// Step 2 - Nest row container in bootstrap container (ie: <div class="dao-row-container">)
+// Step 3 - Assign row container make-row() mixin in this scss partial (ie: make-row();)
+// Step 4 - Nest column(s) containers in row container (ie: <div class="dao-column"></div>)
+// Step 5 - Make use of 4 mixins to generate columns (ie: make-xs-column(), make-sm-column(), make-md-column(), make-lg-column();)
+// Step 6 - Column mixin REQUIRES column number assignment to generate grid columns in your markup (ie: make-xs-column(18);)
+// Step 7 - Offset columns by using 4 offset mixins (ie: make-xs-column-offset(), make-sm-column-offset(), make-md-column-offset(), make-lg-column-offset();)
+// Step 8 - Offset mixin REQUIRES column number assignment, can be integer or decimal (ie: make-xs-column-offset(2);)
+
+//####################################
+//############# Dao Grid #############
+//####################################
+// This project is using a 20 column grid, not the typical 12 column grid of bootstrap
+// Each unit of the grid is now 1/20th of the old 12 column standard bootstrap grid (.6x)
+// (ie, If your standard 12-column, 960px grid is 80px columns, our 20 column grid has 48px columns)
+// To make this work, we reset grid mixin variable to 20
+// See more here: http://getbootstrap.com/css/#grid-less
+$grid-columns: 20;
+
+// Setup up global row style any section can use
+.dao-row {
+  @include make-row();
+}
+
+//##################################
+//############# Header #############
+//##################################
 // Grid for header area
-header section {
-  @include make-row();
-
-  .logo {
-    @include make-sm-column(10);
-    @include make-md-column(12);
-    @include make-lg-column(14);
-  }
-
-  .utility {
-    @include make-sm-column(10);
-    @include make-md-column(8);
-    @include make-lg-column(6);
-  }
+.logo {
+  @include make-sm-column(10);
+  @include make-md-column(12);
+  @include make-lg-column(14);
 }
 
-// Grid for the banner image
-.dao-banner-image-container {
-  @include make-row();
-
-  .dao-banner-image-content {
-    @include make-sm-column(20);
-  }
+.utility {
+  @include make-sm-column(10);
+  @include make-md-column(8);
+  @include make-lg-column(6);
 }
 
-// Grid for features section
-.dao-feature-container {
-  @include make-row();
-
-  .dao-feature-inspiration, .dao-feature-health, .dao-feature-success {
-    @include make-xs-column(20);
-    @include make-sm-column(6);
-  }
-
-  .dao-feature-inspiration {
-    @include make-sm-column-offset(1);
-  }
+//######################################
+//############# Index.html #############
+//######################################
+// Section 1a - Banner Image,
+// Just one giant, responsive column
+.dao-banner-image-content {
+  @include make-sm-column(20);
 }
 
-// Grid for explore section
-.dao-explore-container-1, .dao-explore-container-2  {
-  @include make-row();
+// Section 1b - position:absolute; on top of the banner image
 
-  .dao-explore-unit-1, .dao-explore-unit-2, .dao-explore-unit-3, .dao-explore-unit-4 {
-    @include make-xs-column(16);
-    @include make-xs-column-offset(2);
-    @include make-sm-column(8.5);
-    @include make-sm-column-offset(1);
-  }
+// Section 2 - Daocloud Features
+// 3 column look with a 1 column offset, goes to 1 column on mobile
+.dao-feature-inspiration, .dao-feature-health, .dao-feature-success {
+  @include make-xs-column(20);
+  @include make-sm-column(6);
 }
 
-// Grid for explore section
-.dao-explore-container-1, .dao-explore-container-2  {
-  @include make-row();
-
-  .dao-explore-unit-1, .dao-explore-unit-2, .dao-explore-unit-3, .dao-explore-unit-4 {
-    @include make-xs-column(16);
-    @include make-xs-column-offset(2);
-    @include make-sm-column(8.5);
-    @include make-sm-column-offset(1);
-  }
+.dao-feature-inspiration {
+  @include make-sm-column-offset(1);
 }
 
-// Grid for geopro section
-.dao-geopro-container {
-  //@include make-row();
+// Section 3 - Explore Section
+// 2 column look, goes to 1 column on moblie
+.dao-explore-unit-1, .dao-explore-unit-2, .dao-explore-unit-3, .dao-explore-unit-4 {
+  @include make-xs-column(16);
+  @include make-xs-column-offset(2);
+  @include make-sm-column(8.5);
+  @include make-sm-column-offset(1);
+}
 
-  .dao-geopro-1, .dao-geopro-2, .dao-geopro-3, .dao-geopro-4 {
-    //@include make-xs-column(8);
-    //@include make-xs-column-offset(1);
-    //@include make-sm-column(4);
-  }
+// Section 4 - Geolocated Pros
+// display:inline-block; layout, needed for carousel - leave it loose baby
 
-  .dao-geopro-1 {
-    //@include make-sm-column-offset(2);
-  }
+// Section 5 - Quotes
+// 2 column look, 1 on mobile
+.dao-quote {
+  @include make-xs-column(16);
+  @include make-xs-column-offset(2);
+  @include make-sm-column(8.5);
+  @include make-sm-column-offset(1);
+}
+
+// Section 6a - Featured In
+// 5 column look, goes to 1 column on mobile
+.dao-featuredin {
+  @include make-sm-column(4);
+}
+
+// Section 6b - Featured In Blocks
+// 2 column look, 1 on mobile
+.dao-featuredin-blocks {
+  @include make-xs-column(16);
+  @include make-xs-column-offset(2);
+  @include make-sm-column(8.5);
+  @include make-sm-column-offset(1);
+}
+
+// Section 7 - Getting Started
+// 1 big responsive column
+.dao-getstarted-content {
+  @include make-sm-column(20);
 }

@@ -34,7 +34,8 @@ $large:           22px;
 $larger:          26px;
 $xlarge:          30px;
 $xxlarge:         32px;
-$xxxlarge:        48px;
+$xxxlarge:        40px;
+$xxxxlarge:       48px;
 $reallybig:       64px;
 $tremendous:      80px;
 $absurd:          96px;
@@ -43,7 +44,3 @@ $absurd:          96px;
 $base-border-radius: 3px !default;
 $base-line-height: 1.6em !default;
 $base-spacing: 1.6em !default;
-
-// Grid Overrides
-// Each unit of the grid is now 1/20th of the old 12 column standard bootstrap grid (.6x), where `x` is your column number
-$grid-columns: 20;

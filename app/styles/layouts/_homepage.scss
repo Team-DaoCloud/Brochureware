@@ -1,3 +1,4 @@
+// Section 1a - Daocloud Banner Image
 .dao-banner-image-container .dao-banner-image-content {
   padding: 0;
   margin-top: 60px;
@@ -7,6 +8,7 @@
   }
 }
 
+// Section 1b - Daocloud Banner Content (positioned on top of banner image)
 .dao-banner-text-container {
   color: $brand-white;
   margin: 0 auto;
@@ -56,11 +58,13 @@
     margin-left: 4px;
   }
 
+  // Uses lettering.js (via bower), spans are applied in HTML via JS
   .btn-cta-kerning span {
     padding: 0 0.5%;
   }
 }
 
+// Section 2 - Daocloud Features
 .dao-feature-container {
   background-color: $brand-dark-white;
   text-align: center;
@@ -112,6 +116,7 @@
   }
 }
 
+// Section 3 - Explore Daocloud
 .dao-explore-container {
   padding: 30px 0;
 
@@ -134,6 +139,7 @@
   }
 
   .dao-explore-unit {
+    border-radius: $base-border-radius;
     color: $brand-white;
     min-height: 259px;
     margin-top: 24px;
@@ -144,21 +150,16 @@
     background: url('../../images/explore/girl-on-grass.jpg') top center no-repeat;
 
     // Flips background image to better show people for mobile
+    // See https://github.com/twbs/bootstrap-sass/blob/master/assets/stylesheets/bootstrap/mixins/_vendor-prefixes.scss
     @media (max-width: $screen-xs-min) {
-      -moz-transform: scaleX(-1);
-      -o-transform: scaleX(-1);
-      -webkit-transform: scaleX(-1);
-      transform: scaleX(-1);
+      @include scaleX(-1);
     }
 
     // Unflips the content in the .dao-explore-unit-# containers
     .dao-explore-unit-1-content, .dao-explore-unit-1-title, .dao-explore-unit-1-button {
       @media (max-width: $screen-xs-min) {
         max-width: none;
-        -moz-transform: scaleX(-1);
-        -o-transform: scaleX(-1);
-        -webkit-transform: scaleX(-1);
-        transform: scaleX(-1);
+        @include scaleX(-1);
       }
     }
   }
@@ -172,20 +173,14 @@
 
     // Flips background image to better show people for mobile
     @media (max-width: $screen-xs-min) {
-      -moz-transform: scaleX(-1);
-      -o-transform: scaleX(-1);
-      -webkit-transform: scaleX(-1);
-      transform: scaleX(-1);
+      @include scaleX(-1);
     }
 
     // Unflips the content in the .dao-explore-unit-# containers
     .dao-explore-unit-3-content, .dao-explore-unit-3-title, .dao-explore-unit-3-button {
       @media (max-width: $screen-xs-min) {
         max-width: none;
-        -moz-transform: scaleX(-1);
-        -o-transform: scaleX(-1);
-        -webkit-transform: scaleX(-1);
-        transform: scaleX(-1);
+        @include scaleX(-1);
       }
     }
   }
@@ -199,6 +194,7 @@
   }
 }
 
+// Section 4 Geolocated Professionals
 .dao-geopro-container {
   background-color: $brand-dark-white;
   margin-left: -15px;
@@ -208,6 +204,7 @@
 
   .dao-geopro-1, .dao-geopro-2, .dao-geopro-3, .dao-geopro-4 {
     background-color: $brand-true-white;
+    border-radius: 3px;
     display: inline-block;
     min-height: 200px;
     min-width: 200px;
@@ -221,5 +218,199 @@
 
   h3 {
     font-size: $norm;
+  }
+
+  .dao-geopro-name {
+    font-size: $norm;
+  }
+
+  .dao-geopro-location {
+    color: $brand-gray;
+    font-size: $xsmall;
+    padding-top: 3px;
+    text-transform: uppercase;
+  }
+}
+
+// Section 5 - Quotes
+// 2 column look, goes to 1 column on mobile
+.dao-quote-container {
+  background-color: $brand-light-gray2;
+  padding: 80px 0;
+  margin-left: -15px;
+  margin-right: -15px;
+
+  .dao-quote {
+    background-color: $brand-white;
+    border-radius: $base-border-radius;
+    min-height: 380px;
+    padding: 40px;
+  }
+
+  .dao-quote:last-child {
+    margin-top: 40px;
+
+    @media (min-width: $screen-sm-min) {
+      margin-top: 0;
+    }
+  }
+
+  .dao-quote-portrait {
+    border: 6px solid $brand-light-gray3;
+    border-radius: $base-border-radius;
+    display: inline-block;
+    height: 120px;
+    vertical-align: top;
+    width: 120px;
+  }
+
+  .dao-quote-metadata {
+    display: inline-block;
+    max-width: 300px;
+    padding-top: 20px;
+    vertical-align: top;
+
+    @media (min-width: $screen-xs-min) and (max-width: $screen-sm-min) {
+      padding-top: 0;
+      padding-left: 20px;
+    }
+
+    @media (min-width: $screen-sm-min) and (max-width: $screen-md-min) {
+      padding-top: 20px;
+      padding-left: 0;
+    }
+
+    @media (min-width: $screen-md-min) and (max-width: $screen-lg-min) {
+      max-width: none;
+    }
+
+    @media (min-width: $screen-lg-min) {
+      padding-top: 0;
+      padding-left: 20px;
+    }
+  }
+
+  .dao-quote-content {
+    color: $brand-gray;
+    font-size: $med;
+  }
+
+  h3 {
+    font-size: $norm;
+    margin-bottom: 5px;
+  }
+
+  .dao-quote-title {
+    color: $brand-gray;
+  }
+}
+
+// Section 6a - Featured In
+// 5 column look
+.dao-featuredin-container {
+  background-color: $brand-white;
+  text-align: center;
+  padding-bottom: 60px;
+
+  .dao-featuredin {
+    display: inline-block;
+    margin: 60px 0 0 0;
+    min-height: 50px;
+    padding-top: 10px;
+
+    @media (min-width: $screen-sm-min) {
+      margin: 60px 0 20px 0;
+    }
+  }
+
+  .dao-featuredin-5 {
+    padding-top: 0;
+  }
+}
+
+// Section 6b - Featured In Blocks (2 up)
+// 2 column look
+.dao-featuredin-blocks-container {
+  background-color: $brand-dark-white;
+
+  .dao-featuredin-blocks {
+    background-color: $brand-true-white;
+    border-radius: $base-border-radius;
+    min-height: 220px;
+    padding: 35px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
+  .dao-featuredin-blocks:last-child {
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+    @media (max-width: $screen-sm-min) {
+      margin-top: 0;
+    }
+  }
+
+  .dao-featuredin-blocks-portrait {
+    display: inline-block;
+    height: 150px;
+    width: 150px;
+    vertical-align: top;
+  }
+
+  .dao-featuredin-blocks-metadata {
+    display: inline-block;
+    padding-top: 10px;
+    width: 160px;
+
+    @media (min-width: $screen-lg-min) {
+      padding-top: 20px;
+      width: 220px;
+    }
+  }
+
+  img {
+    margin-right: 20px;
+  }
+
+  h2 {
+    margin-top: 0px;
+    text-align: left;
+  }
+
+  .dao-featuredin-blocks-content {
+    font-size: $norm;
+  }
+
+  a.btn-default {
+    margin-top: 25px;
+  }
+}
+
+// Section 7
+.dao-getstarted-container {
+
+  .dao-getstarted-content{
+    margin-top: 60px;
+    margin-bottom: 60px;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: $xxxlarge;
+  }
+
+  a, a:visited, a:active {
+    color: $brand-white;
+  }
+
+  .btn {
+    padding: 20px 60px;
+    margin-top: 20px;
+  }
+
+  // spans are injected via lettering.js (via bower)
+  .btn-getstarted-cta-kerning span {
+    padding: 0 1%;
   }
 }

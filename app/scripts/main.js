@@ -5,5 +5,6 @@
   $(document).ready(function() {
     $('.dao-banner-text-intro').lettering();
     $('.btn-cta-kerning').lettering();
+    $('.btn-getstarted-cta-kerning').lettering();
   });
 })(jQuery);
