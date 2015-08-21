@@ -108,3 +108,14 @@ $grid-columns: 20;
 .dao-getstarted-content {
   @include make-sm-column(20);
 }
+
+//######################################
+//############# pros.html #############
+//######################################
+
+.connect-copy {
+  @include make-sm-column(10);
+}
+.connect-img {
+  @include make-sm-column(10);
+}
