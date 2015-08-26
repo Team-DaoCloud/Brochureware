@@ -1,0 +1,13 @@
+.footer-container {
+  background-color: $brand-black;
+  color: $brand-light-gray1;
+
+  .footer-logo {}
+  .footer-license {}
+  .footer-nav {}
+  .footer-socials {
+    img {
+      @include opacity(0.6);
+    }
+  }
+}
