@@ -45,6 +45,22 @@ $grid-columns: 20;
   @include make-lg-column(6);
 }
 
+//##################################
+//############# Footer #############
+//##################################
+// Grid for footer area
+.footer-container-left {
+  @include make-xs-column(20);
+  @include make-sm-column(4);
+  @include make-md-column(6);
+}
+
+.footer-container-right {
+  @include make-xs-column(20);
+  @include make-sm-column(16);
+  @include make-md-column(14);
+}
+
 //######################################
 //############# Index.html #############
 //######################################

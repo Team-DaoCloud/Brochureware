@@ -28,7 +28,7 @@ $xxsmall:         8px;
 $xxsmall:         10px;
 $xsmall:          12px;
 $small:           14px;
-$norm:            16px; // $base-font-size (16px == default)
+$norm:            16px;
 $med:             18px;
 $large:           22px;
 $larger:          26px;
@@ -42,5 +42,6 @@ $absurd:          96px;
 
 // Spacing
 $base-border-radius: 3px !default;
+$base-font-size: $norm !default;
 $base-line-height: 1.6em !default;
 $base-spacing: 1.6em !default;
