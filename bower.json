@@ -4,7 +4,9 @@
   "dependencies": {
     "bootstrap-sass": "~3.3.5",
     "modernizr": "~2.8.1",
-    "Lettering.js": "~0.7.0"
+    "Lettering.js": "~0.7.0",
+    "bootstrap": "~3.3.5",
+    "jquery": "~2.1.4"
   },
   "overrides": {
     "bootstrap-sass": {

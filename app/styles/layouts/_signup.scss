@@ -1,0 +1,56 @@
+#signup-page{
+  min-height: 100%;
+  position: relative;
+}
+.signup-box {
+  background: #fff;
+  border-radius: 3px;
+  box-shadow: 2px 2px 5px #999;
+  margin: 10px auto;
+  padding: 10px 30px 30px 30px;
+  width: 70%;
+  text-align: center;
+
+  @media (max-width: $screen-sm-min) {
+    width: 95%;
+    padding: 10px 5px 30px 5px;
+  }
+}
+
+hr {
+  height: 1px;
+  border: 0;
+}
+
+.signup-bg {
+  background: url("/images/bg-mounts2.jpg") no-repeat left top;
+  min-height: 800px;
+  padding-top: 100px;
+}
+
+.margin10 {
+  margin-bottom: 10px;
+}
+
+.btn-wrap {
+  width: 60%;
+  margin: 20px auto;
+  @media (max-width: $screen-sm-min) {
+    width: 70%;
+  }
+  @media (max-width: $screen-xs-min) {
+    width: 100%;
+  }
+}
+
+.btn-fb {
+  background: #37559b;
+  color: #fff;
+  border-radius: 0;
+}
+
+.btn-tw {
+  background: #00a8f2;
+  color: #fff;
+  border-radius: 0;
+}
