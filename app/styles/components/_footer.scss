@@ -36,8 +36,13 @@
     text-align: right;
   }
 
-  a, a:visited, a:active {
+  a, a:visited, a:active, a:focus {
     color: $brand-light-gray1;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
   }
 
   li {
