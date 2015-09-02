@@ -1,24 +1,20 @@
 .btn {
   border-radius: $base-border-radius;
-  font-family: lato;
+  font-family: $lato-family;
   text-transform: uppercase;
 }
 
 // Main ghost button
-.btn-default, .btn-default:hover {
+.btn-default, .btn-default:hover, .btn-default:visited, .btn-default:active, .btn-default:focus {
   background-color: transparent;
   border: 1px solid $brand-green;
   color: $brand-green;
   padding: 8px 32px;
 }
 
-a.btn-default, a:visited.btn-default, a:active.btn-default {
-  // ghost button requires the you style the link inside of it for visual consistency
-  color: $brand-green;
-}
 
 // Main green button, leveraging 'success' buttons
-.btn-success {
+.btn-success, .btn-success:visited, .btn-success:active, .btn-success:focus {
   background-color: $brand-green;
   border: none;
   transition: all 0.2s ease-in-out;

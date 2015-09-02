@@ -74,13 +74,8 @@ $grid-columns: 20;
 
 // Section 2 - Daocloud Features
 // 3 column look with a 1 column offset, goes to 1 column on mobile
-.dao-feature-inspiration, .dao-feature-health, .dao-feature-success {
+.dao-feature {
   @include make-xs-column(20);
-  @include make-sm-column(6);
-}
-
-.dao-feature-inspiration {
-  @include make-sm-column-offset(1);
 }
 
 // Section 3 - Explore Section
@@ -125,8 +120,17 @@ $grid-columns: 20;
   @include make-sm-column(20);
 }
 
-//######################################
-//############# pros.html #############
-//######################################
+//####################################
+//############# Pro Page #############
+//####################################
 
+// Section 4 - Screenshots
+.connect-copy {
+  @include make-xs-column(20);
+  @include make-sm-column(8);
+}
 
+.connect-img {
+  @include make-xs-column(20);
+  @include make-sm-column(12);
+}
