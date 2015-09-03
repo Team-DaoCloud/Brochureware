@@ -2,6 +2,10 @@
   border-radius: $base-border-radius;
   font-family: $lato-family;
   text-transform: uppercase;
+
+  @media (max-width: $screen-xs-min) {
+    white-space: normal;
+  }
 }
 
 // Main ghost button

@@ -18,6 +18,10 @@
   .btn {
     padding: 20px 60px;
     margin-top: 20px;
+
+    @media (max-width: $screen-xs-min) {
+      padding: 20px;
+    }
   }
 
   .glyphicon {

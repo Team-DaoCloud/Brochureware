@@ -186,6 +186,11 @@
     border-radius: $base-border-radius;
     min-height: 380px;
     padding: 40px;
+    text-align: center;
+
+    @media (min-width: $screen-lg-min) {
+      text-align: left;
+    }
   }
 
   .dao-quote:last-child {
