@@ -1,0 +1,11 @@
+.dao-feature-container-affiliates {
+  .dao-feature-pros-icon {
+    img {
+      height: auto;
+    }
+
+    @media (min-width: $screen-sm-min) {
+      margin-bottom: 0px;
+    }
+  }
+}
