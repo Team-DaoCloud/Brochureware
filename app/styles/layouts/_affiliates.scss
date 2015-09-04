@@ -1,4 +1,6 @@
 .dao-feature-container-affiliates {
+  background-color: $brand-true-white;
+
   .dao-feature-pros-icon {
     img {
       height: auto;
@@ -7,5 +9,17 @@
     @media (min-width: $screen-sm-min) {
       margin-bottom: 0px;
     }
+  }
+}
+
+.dao-table-container {
+  background-color: $brand-dark-white;
+}
+
+.dao-affiliate-signup-container {
+
+  .dao-banner-image-content {
+    margin-top: 0;
+    min-height: 500px;
   }
 }

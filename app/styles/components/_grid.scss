@@ -134,3 +134,14 @@ $grid-columns: 20;
   @include make-xs-column(20);
   @include make-sm-column(12);
 }
+
+//######################################
+//############# Affiliates #############
+//######################################
+
+.dao-table {
+  @include make-xs-column(18);
+  @include make-xs-column-offset(1);
+  @include make-sm-column(10);
+  @include make-sm-column-offset(5);
+}
