@@ -79,6 +79,10 @@
     border: 1px solid $brand-white;
   }
 
+  .btn-default:hover {
+    background-color: rgba(245,245,245,0.2);
+  }
+
   a.btn-default, a:visited.btn-default, a:active.btn-default {
     color: $brand-white;
   }

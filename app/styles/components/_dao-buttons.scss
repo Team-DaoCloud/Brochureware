@@ -9,11 +9,18 @@
 }
 
 // Main ghost button
-.btn-default, .btn-default:hover, .btn-default:visited, .btn-default:active, .btn-default:focus {
+.btn-default, .btn-default:visited, .btn-default:active, .btn-default:focus {
   background-color: transparent;
   border: 1px solid $brand-green;
   color: $brand-green;
   padding: 8px 32px;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-default:hover {
+  background-color: $brand-dark-white;
+  border: 1px solid $brand-green;
+  color: $brand-green;
 }
 
 
