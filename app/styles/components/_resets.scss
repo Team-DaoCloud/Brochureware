@@ -40,7 +40,7 @@ hr {
   margin-bottom: 10px;
 }
 
-a, a:active, a:visited {
+a, a:active, a:visited, a:focus {
   color: $brand-dark-gray1;
 }
 
@@ -80,6 +80,10 @@ a:hover {
 .hide-content,
 .hide-content-heading {
   display: none;
+}
+
+.big-break {
+  margin: 80px 0;
 }
 
 // spans are injected via lettering.js (via bower)

@@ -1,0 +1,17 @@
+.dao-privacy-content {
+  h1 {
+    text-align: center;
+  }
+
+  margin-top: $base-navbar-offset-mobile;
+  margin-bottom: $base-navbar-offset-mobile;
+
+  @media (min-width: $screen-sm-min) {
+    margin-top: $base-navbar-offset;
+    margin-bottom: $base-navbar-offset;
+  }
+
+  a, a:active, a:visited, a:focus, a:hover {
+    color: $brand-green;
+  }
+}

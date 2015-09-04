@@ -145,3 +145,23 @@ $grid-columns: 20;
   @include make-sm-column(10);
   @include make-sm-column-offset(5);
 }
+
+.dao-affiliate-signup {
+  @include make-xs-column(18);
+  @include make-xs-column-offset(1);
+  @include make-sm-column(10);
+  @include make-sm-column-offset(5);
+}
+
+//###########################################
+//############# Privacy / Terms #############
+//###########################################
+
+.dao-privacy-content {
+  @include make-xs-column(18);
+  @include make-xs-column-offset(1);
+  @include make-sm-column(16);
+  @include make-sm-column-offset(2);
+  @include make-lg-column(14);
+  @include make-lg-column-offset(3);
+}
