@@ -8,13 +8,13 @@ $(document).ready(function() {
     $.ajax({
       type: "POST",
       url:  "https://www.daocloud.com/api/v1/regions",
-      data: { firstName: firstname, lastName: lastname, email: email, phone: phone, region: region, personType: personType, leadSource: "Affilate section of Daocloud Landing Page" }
+      data: { firstName: firstname, lastName: lastname, email: email, phone: phone, region: region, personType: personType, leadSource: leadSource }
     }).done(function(msg)
       {
         if(msg=='OK'){
           // all went well, data was saved to infusion
           // we can redirect to '/demo?region=' + reg1 (/demo is the pricing results page)
-          window.location="../demo/index.html?firstname="+firstname+"&lastname="+lastname+"&email="+email+"&phone="+phone+"&region="+region;
+          window.location="../thanks/index.html?firstname="+firstname+"&lastname="+lastname+"&email="+email+"&phone="+phone+"&region="+region;
         }
         else {
           //something went wrong
@@ -32,6 +32,7 @@ $(document).ready(function() {
     var email = $(evt.target[1]).val();
     var phone = $(evt.target[2]).val();
     var region = $(evt.target[3]).val();
+    var personType = "Affiliate Prospect";
 
     submitForm(name[0], name[1], email, phone, region, personType);
   });
