@@ -23,3 +23,30 @@
     min-height: 500px;
   }
 }
+
+.dao-affiliate-form-content {
+  background-color: rgba(245,245,245,0.85);
+  border-radius: $base-border-radius;
+  padding: 20px;
+  margin-top: -450px;
+
+  @media (min-width: $screen-lg-min) {
+    margin-top: -500px;
+  }
+
+  h2 {
+    margin: 15px;
+  }
+
+  input {
+    border: 1px solid $brand-dark-gray1;
+    color: $brand-dark-gray1;
+    height: 40px;
+    margin: 25px 0;
+    padding: 5px 10px;
+  }
+
+  .btn {
+    height: 40px;
+  }
+}

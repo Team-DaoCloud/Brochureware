@@ -139,14 +139,7 @@ $grid-columns: 20;
 //############# Affiliates #############
 //######################################
 
-.dao-table {
-  @include make-xs-column(18);
-  @include make-xs-column-offset(1);
-  @include make-sm-column(10);
-  @include make-sm-column-offset(5);
-}
-
-.dao-affiliate-signup {
+.dao-table, .dao-affiliate-signup, .dao-affiliate-form-content {
   @include make-xs-column(18);
   @include make-xs-column-offset(1);
   @include make-sm-column(10);

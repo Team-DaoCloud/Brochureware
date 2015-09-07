@@ -10,7 +10,7 @@ $(document).ready(function() {
       url:  "https://www.daocloud.com/api/v1/regions",
       data: { firstName: firstname, lastName: lastname, email: email, phone: phone, region: region, personType: personType, leadSource: leadSource }
     }).done(function(msg)
-      {
+      { 
         if(msg=='OK'){
           // all went well, data was saved to infusion
           // we can redirect to '/demo?region=' + reg1 (/demo is the pricing results page)
