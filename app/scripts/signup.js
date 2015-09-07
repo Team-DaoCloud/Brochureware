@@ -1,4 +1,4 @@
-(function($){
+ (function($){
     $('#carousel-signup').carousel({
       interval: false
     });

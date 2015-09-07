@@ -28,6 +28,7 @@
 .btn-success, .btn-success:visited, .btn-success:active, .btn-success:focus {
   background-color: $brand-green;
   border: none;
+  color: $brand-white;
   transition: all 0.2s ease-in-out;
 }
 

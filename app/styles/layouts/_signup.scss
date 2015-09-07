@@ -15,6 +15,22 @@
     width: 95%;
     padding: 10px 5px 30px 5px;
   }
+
+  .btn-default {
+    padding-top: 14px;
+    padding-bottom: 14px;
+    margin-bottom: 20px;
+  }
+
+  .btn-success {
+    a, a:active, a:visited, a:focus {
+      color: $brand-white;
+    }
+
+    a:hover {
+      text-decoration: none;
+    }
+  }
 }
 
 hr {
