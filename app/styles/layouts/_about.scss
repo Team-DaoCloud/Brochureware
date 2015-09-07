@@ -1,13 +1,5 @@
-.dao-about-featuredin-blocks {
-	margin: 20px 0 20px 0;
-}
-
-.dao-about-featuredin {
-	margin: 20px 0 20px 0;
-}
-
 .dao-about-firstPletter {
-	font-size: -webkit-xxx-large;
+	font-size: $xxxxlarge;
 	color: $brand-green;
 	width: 45px;
 	float: left;
@@ -24,50 +16,42 @@
 .dao-about-firstParagraph {
 	padding: 14px 0 0 0;
 	line-height: 1.4em;
-	font-size: 12px;
+	font-size: $norm;
 }
 
 .dao-about-image1 {
-	margin-top: 75px;
+	margin: 75px auto;
 }
 
 .dao-about-paragraph {
-	padding: 0 0 0 0;
+	padding: 0;
 	line-height: 1.4em;
-	font-size: 12px;
+	font-size: $norm;
 }
 
 .dao-about-contact-emails {
-	dl {
-		right: 0;
-		position: absolute;
-	}
 	dt {
 		font-weight: normal;
 		font-size: smaller;
 	}
 	dd {
+		padding-bottom: 20px;
 		a {
 			font-size: large;
 			color: $brand-green;
 		}
 	}
+	dt:first-child {
+		padding-top: 20px;
+	}
 }
 
-@media(max-width: 992px) {
-	.dao-about-contact-emails {
-		dl {
-			right: initial;
-			position: initial;
-		}
-	}	
+.dao-about-title {
+	.dao-banner-text-subhead {
+		padding: 0 15%;
+	}
 }
 
-.dao-about-banner-text1 {
-	margin-top: 10px;
-	font-size: x-large;
-}
-
-.dao-about-banner-text2 {
-	margin-top: 10px;
+.dao-about-featuredin-blocks {
+	text-align: center;
 }
