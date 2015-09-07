@@ -97,7 +97,7 @@
   }
 
   .dao-explore-unit-1 {
-    background: url('../../images/explore/girl-on-grass.jpg') top center no-repeat;
+    background: url('../images/explore/girl-on-grass.jpg') top center no-repeat;
 
     // Flips background image to better show people for mobile
     // See https://github.com/twbs/bootstrap-sass/blob/master/assets/stylesheets/bootstrap/mixins/_vendor-prefixes.scss
@@ -115,11 +115,11 @@
   }
 
   .dao-explore-unit-2 {
-    background: url('../../images/explore/people-tent.jpg') top center no-repeat;
+    background: url('../images/explore/people-tent.jpg') top center no-repeat;
   }
 
   .dao-explore-unit-3 {
-    background: url('../../images/explore/carrot-girl.jpg') top center no-repeat;
+    background: url('../images/explore/carrot-girl.jpg') top center no-repeat;
 
     // Flips background image to better show people for mobile
     @media (max-width: $screen-xs-min) {
@@ -136,7 +136,7 @@
   }
 
   .dao-explore-unit-4 {
-    background: url('../../images/explore/chiropractic-woman.jpg') top center no-repeat;
+    background: url('../images/explore/chiropractic-woman.jpg') top center no-repeat;
   }
 
   .dao-explore-unit-1-content, .dao-explore-unit-2-content, .dao-explore-unit-3-content, .dao-explore-unit-4-content {
