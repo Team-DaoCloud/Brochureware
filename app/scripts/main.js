@@ -1,4 +1,5 @@
 'use strict';
+/* global jQuery */
 
 // Sets up lettering.js on the header title space
 (function($) {
@@ -8,4 +9,6 @@
     $('.btn-getstarted-cta-kerning').lettering();
     $('.btn-different-cta-kerning').lettering();
   });
+
 })(jQuery);
+

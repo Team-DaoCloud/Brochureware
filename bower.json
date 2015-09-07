@@ -3,7 +3,10 @@
   "private": true,
   "dependencies": {
     "bootstrap-sass": "~3.3.5",
-    "Lettering.js": "~0.7.0"
+    "Lettering.js": "~0.7.0",
+    "modernizr": "~2.8.3",
+    "bootstrap": "~3.3.5",
+    "jquery": "~2.1.4"
   },
   "overrides": {
     "bootstrap-sass": {
