@@ -6,7 +6,8 @@
     "Lettering.js": "~0.7.0",
     "modernizr": "~2.8.3",
     "bootstrap": "~3.3.5",
-    "jquery": "~2.1.4"
+    "jquery": "~2.1.4",
+    "waypoints": "~4.0.0"
   },
   "overrides": {
     "bootstrap-sass": {
