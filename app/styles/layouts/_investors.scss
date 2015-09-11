@@ -1,3 +1,4 @@
+// Section 1 - Movie
 .dao-investor-hero {
   h2 {
     font-size: $larger;
@@ -30,6 +31,7 @@
   }
 }
 
+// Section 2 - Pitch Deck + Executive Summary
 .dao-investor-buttons {
   background: $brand-dark-white;
 
@@ -47,6 +49,46 @@
   }
 }
 
+.dao-investor-deck {
+  padding: 20px 0;
+  min-height: 200px;
+
+  iframe {
+    height: 225px;
+    width: 300px;
+
+    @media (min-width: $screen-xs-min) and (max-width: $screen-sm-min) {
+      height: 380px;
+      width: 450px;
+    }
+
+    @media (min-width: $screen-sm-min) {
+      height: 480px;
+      width: 640px;
+    }
+  }
+}
+
+.dao-investor-summary {
+  iframe {
+    height: 225px;
+    width: 300px;
+
+    @media (min-width: $screen-xs-min) and (max-width: $screen-sm-min) {
+      height: 380px;
+      width: 450px;
+    }
+
+    @media (min-width: $screen-sm-min) {
+      height: 480px;
+      width: 640px;
+    }
+  }
+}
+
+// Section 3 - Co-founders
+// leverages components/_features.scss
+// overrides for circle images and other stuff
 .dao-investor-features {
   background-color: $brand-true-white;
 
@@ -86,11 +128,7 @@
   }
 }
 
-.dao-investor-deck {
-  padding: 20px 0;
-  min-height: 200px;
-}
-
+// Section 4 - Investor Contact
 .dao-investor-contact {
   background-color: $brand-dark-white;
 }
