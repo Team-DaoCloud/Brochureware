@@ -13,6 +13,7 @@ var path = require('path');
 var wrap = require('gulp-wrap');
 var concat = require('gulp-concat');
 var handlebars = require('gulp-handlebars');
+var replace = require('gulp-replace');
 
 gulp.task('partials', function() {
   // Assume all partials start with an underscore
@@ -53,7 +54,7 @@ function lint(files, options) {
       .pipe(reload({stream: true, once: true}))
       .pipe($.eslint(options))
       .pipe($.eslint.format())
-      .pipe($.if(!browserSync.active, $.eslint.failAfterError()));
+      //.pipe($.if(!browserSync.active, $.eslint.failAfterError()));
   };
 }
 const testLintOptions = {
@@ -68,7 +69,7 @@ gulp.task('lint:test', lint('test/spec/**/*.js', testLintOptions));
 gulp.task('html', ['styles'], () => {
   const assets = $.useref.assets({searchPath: ['.tmp', 'app', '.']});
 
-  return gulp.src('app/*.html')
+  return gulp.src(['app/*.html', 'app/**/*.html'])
     .pipe(assets)
     .pipe($.if('*.js', $.uglify()))
     .pipe($.if('*.css', $.minifyCss({compatibility: '*'})))
@@ -100,6 +101,15 @@ gulp.task('fonts', () => {
   }).concat('app/fonts/**/*'))
     .pipe(gulp.dest('.tmp/fonts'))
     .pipe(gulp.dest('dist/fonts'));
+});
+
+gulp.task('rewrite', function(){
+  gulp.src(['app/**/*.html'])
+    .pipe(replace('styles/main.css', '../scripts/main.css'))
+    .pipe(replace('scripts/main.js', '../scripts/main.js'))
+    .pipe(replace('scripts/plugins.js', '../scripts/plugins.js'))
+    .pipe(replace('scripts/vendor.js', '../scripts/vendor.js'))
+    .pipe(gulp.dest('dist/**/*.html'));
 });
 
 gulp.task('extras', () => {
@@ -181,7 +191,7 @@ gulp.task('wiredep', () => {
     .pipe(gulp.dest('app'));
 });
 
-gulp.task('build', ['lint', 'html', 'images', 'partials', 'fonts', 'extras'], () => {
+gulp.task('build', ['lint', 'html', 'images', 'partials', 'fonts', 'extras', 'rewrite'], () => {
   return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
 });
 
