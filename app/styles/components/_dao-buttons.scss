@@ -14,7 +14,7 @@
   border: 1px solid $brand-green;
   color: $brand-green;
   padding: 8px 32px;
-  transition: all 0.2s ease-in-out;
+  @include transition(all 0.2s ease-in-out);
 }
 
 .btn-default:hover {
@@ -29,7 +29,7 @@
   background-color: $brand-green;
   border: none;
   color: $brand-white;
-  transition: all 0.2s ease-in-out;
+  @include transition(all 0.2s ease-in-out);
 }
 
 .btn-success:hover {
