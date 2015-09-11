@@ -1,17 +1,25 @@
 'use strict';
 /* global jQuery */
 
-// Sets up lettering.js on the header title space
+// Little stuff
 (function($) {
   $(document).ready(function() {
+
+    // Sets up lettering.js span targets
     $('.dao-banner-text-intro').lettering();
     $('.btn-cta-kerning').lettering();
     $('.btn-getstarted-cta-kerning').lettering();
     $('.btn-different-cta-kerning').lettering();
+
+    // Gives us the current year
+    var currentTime = new Date();
+    var currentYear = currentTime.getFullYear();
+    $('.current-year').append(currentYear);
   });
 
 })(jQuery);
 
+// Function to get mailchimp sign-up working for /signup page
 (function($){
    $('#carousel-signup').carousel({
      interval: false
@@ -50,11 +58,7 @@
      $('#signup-form').removeClass('has-error');
      $('#form-email').removeClass('has-error');
    });
-
-   $('.signup-bg').css('min-height', function(){
-     return $(document).height() - 300;
-   });
    $('.item').css('min-height', function(){
      return $(document).height() - 400;
-     });
+   });
 })(jQuery);

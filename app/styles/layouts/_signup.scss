@@ -1,3 +1,4 @@
+// Whole page is just one giant section with JS controls
 #signup-page{
   min-height: 100%;
   position: relative;
@@ -40,7 +41,7 @@ hr {
 
 .signup-bg {
   background: url("/images/bg-mounts2.jpg") no-repeat left top;
-  min-height: 800px;
+  height: 100vh;
   padding-top: 100px;
 }
 
