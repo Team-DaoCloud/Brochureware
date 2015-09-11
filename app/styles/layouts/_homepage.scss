@@ -1,66 +1,12 @@
 // Section 1a - Daocloud Banner Image
-.dao-banner-image-container .dao-banner-image-content {
-  padding: 0;
-  margin-top: $base-navbar-offset-mobile;
-  min-height: 300px;
-
-  @media (min-width: $screen-md-min) {
-    margin-top: $base-navbar-offset;
-  }
+// see: components/_banners.scss partial
+// Overrides to the component only here
+.dao-banner-image-content-homepage {
+  background: url('../images/banners/landing-page-bg.jpg') no-repeat top center;
 }
 
-// Section 1b - Daocloud Banner Content (positioned on top of banner image)
-.dao-banner-text-container {
-  color: $brand-white;
-  margin: 0 auto;
-  position: absolute;
-  top: 10%;
-  text-align: center;
-  width: 100%;
-  z-index: 2;
-
-  @media (min-width: $screen-xs-min) {
-    top: 12%;
-  }
-
-  @media (min-width: $screen-sm-min) {
-    top: 14%;
-  }
-
-  @media (min-width: $screen-md-min) {
-    top: 16%;
-  }
-
-  .dao-banner-text-intro {
-    text-transform: uppercase;
-
-    span {
-      padding: 0 2px;
-    }
-  }
-
-  .dao-banner-text-subhead {
-    font-size: $norm;
-    margin: 28px 0 12px 0;
-
-    @media (min-width: $screen-lg-min) {
-      margin: 84px 0 16px 0;
-    }
-  }
-
-  h1 {
-    color: $brand-white;
-    font-size: $xxxlarge;
-    font-weight: bold;
-    margin-top: 10px;
-  }
-
-  .btn-cta-kerning {
-    margin-left: 4px;
-  }
-}
-
-// Section 2 - see components/_features.scss partial
+// Section 2 - 3-up Icon Features
+// see: components/_features.scss partial
 
 // Section 3 - Explore Daocloud
 .dao-explore-container {
@@ -263,14 +209,18 @@
   text-align: center;
   padding-bottom: 60px;
 
+  h2 {
+    font-size: $norm;
+  }
+
   .dao-featuredin {
     display: inline-block;
-    margin: 60px 0 0 0;
+    margin: 60px 20px 0 20px;
     min-height: 50px;
     padding-top: 10px;
 
     @media (min-width: $screen-sm-min) {
-      margin: 60px 0 20px 0;
+      margin: 60px 20px 20px 20px;
     }
   }
 
