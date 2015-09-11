@@ -1,3 +1,21 @@
+// Section 1a - Daocloud Banner Image
+// see: components/_banners.scss partial
+// Overrides to the component only here
+.dao-banner-image-content-pros {
+  background: url('../images/banners/pros-bg.jpg') no-repeat top center;
+}
+
+.dao-banner-text-container.dao-pro-title {
+	top: 8vh;
+
+	@media (min-width: $screen-xs-min) {
+		top: 20vh;
+	}
+}
+
+// Section 2 - 3-up Icon Features
+// leverages components/_features.scss
+// overrides here only
 .dao-feature-container-pros {
 	background-color: $brand-true-white;
 }
@@ -16,6 +34,7 @@
 	}
 }
 
+// Section 3 - Partners Logos
 .partner-logos-container {
   background-color: $brand-dark-white;
   text-align: center;
@@ -36,18 +55,18 @@
   	}
   }
   h2 {
-  	margin: 0 0 10px;
+  	font-size: $norm;
+		margin: 0 0 10px;
   	padding: 0;
   }
 }
 
-// Connect with the Network Section
+// Section 4- Connect with the Network Section
 h2.connect-heading {
 	margin: 30px;
 }
 
 .connect-wrapper {
-
 	.nav > li > a {
 		margin-bottom: 10px;
 		padding: 5px;
@@ -132,6 +151,7 @@ h2.connect-heading {
 	}
 }
 
+// Section 5 - 6-up display
 .dao-different {
 	background-color: $brand-dark-white;
 	margin-top: 50px;
@@ -175,6 +195,17 @@ h2.connect-heading {
 
 		img {
 			margin: 0 20px 30px 0;
+		}
+	}
+}
+
+.dao-getstarted-content {
+	h4 {
+		font-size: $norm;
+
+		a, a:active, a:visited, a:focus, a:hover {
+		  color: $brand-dark-gray4;
+			text-decoration: none;
 		}
 	}
 }

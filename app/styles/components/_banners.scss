@@ -38,10 +38,6 @@
   .dao-banner-text-subhead {
     font-size: $norm;
     margin: 28px 0 12px 0;
-
-    @media (min-width: $screen-lg-min) {
-      margin: 84px 0 16px 0;
-    }
   }
 
   h1 {
