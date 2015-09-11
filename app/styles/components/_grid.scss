@@ -101,9 +101,7 @@ $grid-columns: 20;
 
 // Section 6a - Featured In
 // 5 column look, goes to 1 column on mobile
-.dao-featuredin {
-  @include make-sm-column(4);
-}
+// no grid, display: inline-block;
 
 // Section 6b - Featured In Blocks
 // 2 column look, 1 on mobile
