@@ -1,3 +1,20 @@
+// Section 1a - Daocloud Banner Image
+// see: components/_banners.scss partial
+// Overrides to the component only here
+.dao-banner-image-content-about {
+  background: url('../images/banners/about-pg.jpg') no-repeat top center;
+}
+
+.dao-banner-text-container.dao-about-title {
+	top: 7vh;
+
+	@media (min-width: $screen-xs-min) {
+		top: 20vh;
+	}
+}
+
+
+// Section 2 - long form letter
 .dao-about-firstPletter {
 	font-size: $xxxxlarge;
 	color: $brand-green;
@@ -29,6 +46,7 @@
 	font-size: $norm;
 }
 
+// Section 3 - email list
 .dao-about-contact-emails {
 	dt {
 		font-weight: normal;
