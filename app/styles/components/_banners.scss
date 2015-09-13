@@ -9,6 +9,10 @@
   @media (min-width: $screen-md-min) {
     margin-top: $base-navbar-offset;
   }
+
+  @media (orientation: portrait) and (min-height: $screen-xs-min) {
+    height: 450px;
+  }
 }
 
 // Section 1b - Daocloud Banner Content (positioned on top of banner image)
@@ -17,21 +21,21 @@
   margin: 0 auto;
   padding: 0 10px;
   position: absolute;
-  top: 15vh;
+  top: 120px;
   text-align: center;
   width: 100%;
   z-index: 2;
 
   @media (min-width: $screen-xs-min) {
     padding: 0;
-    top: 20vh;
+    top: 150px;
   }
 
   .dao-banner-text-intro {
     text-transform: uppercase;
 
     span {
-      padding: 0 2px;
+      padding: 0 3px;
     }
   }
 

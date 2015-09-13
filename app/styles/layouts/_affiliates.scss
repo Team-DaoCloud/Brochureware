@@ -3,6 +3,10 @@
 // overrides only here
 .dao-banner-image-content-affilate {
   background: url('../images/banners/affiliates-banner.jpg') no-repeat top center;
+
+  @media (orientation: portrait) and (min-height: $screen-xs-min) {
+    height: 350px;
+  }
 }
 
 .dao-banner-text-container.dao-affiliate-title {

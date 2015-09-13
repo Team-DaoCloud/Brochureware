@@ -13,8 +13,11 @@
 	}
 }
 
-
 // Section 2 - long form letter
+.dao-about-featuredin {
+  margin-bottom: 30px;
+}
+
 .dao-about-firstPletter {
 	font-size: $xxxxlarge;
 	color: $brand-green;
@@ -48,6 +51,9 @@
 
 // Section 3 - email list
 .dao-about-contact-emails {
+  margin-top: 30px;
+  margin-botom: 30px;
+
 	dt {
 		font-weight: normal;
 		font-size: smaller;
@@ -62,6 +68,10 @@
 	dt:first-child {
 		padding-top: 20px;
 	}
+}
+
+.dao-address {
+  margin-bottom: 30px;
 }
 
 .dao-about-title {

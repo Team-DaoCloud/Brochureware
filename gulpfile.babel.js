@@ -15,6 +15,7 @@ var concat = require('gulp-concat');
 var handlebars = require('gulp-handlebars');
 var replace = require('gulp-replace');
 
+// This doesnt do anything just yet but it might in the future if we use handlebars for some templating
 gulp.task('partials', function() {
   // Assume all partials start with an underscore
   // You could also put them in a folder such as source/templates/partials/*.hbs
@@ -75,6 +76,9 @@ gulp.task('html', ['styles'], () => {
     .pipe($.if('*.css', $.minifyCss({compatibility: '*'})))
     .pipe(assets.restore())
     .pipe($.useref())
+    .pipe($.if('*.html', $.replace('scripts/main.js', '../scripts/main.js')))
+    .pipe($.if('*.html', $.replace('scripts/plugins.js', '../scripts/plugins.js')))
+    .pipe($.if('*.html', $.replace('scripts/vendor.js', '../scripts/vendor.js')))
     .pipe($.if('*.html', $.minifyHtml({conditionals: true, loose: true})))
     .pipe(gulp.dest('dist'));
 });
@@ -101,15 +105,6 @@ gulp.task('fonts', () => {
   }).concat('app/fonts/**/*'))
     .pipe(gulp.dest('.tmp/fonts'))
     .pipe(gulp.dest('dist/fonts'));
-});
-
-gulp.task('rewrite', function(){
-  gulp.src(['app/**/*.html'])
-    .pipe(replace('styles/main.css', '../scripts/main.css'))
-    .pipe(replace('scripts/main.js', '../scripts/main.js'))
-    .pipe(replace('scripts/plugins.js', '../scripts/plugins.js'))
-    .pipe(replace('scripts/vendor.js', '../scripts/vendor.js'))
-    .pipe(gulp.dest('dist/**/*.html'));
 });
 
 gulp.task('extras', () => {
@@ -191,7 +186,7 @@ gulp.task('wiredep', () => {
     .pipe(gulp.dest('app'));
 });
 
-gulp.task('build', ['lint', 'html', 'images', 'partials', 'fonts', 'extras', 'rewrite'], () => {
+gulp.task('build', ['lint', 'html', 'images', 'partials', 'fonts', 'extras'], () => {
   return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
 });
 
