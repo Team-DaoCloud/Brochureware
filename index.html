@@ -63,7 +63,25 @@
             var path = 'path=/';
             document.cookie = cname + "=" + cvalue + "; " + expires + path;
         }
+
+        var getUrlParameter = function getUrlParameter(sParam) {
+          var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+              sURLVariables = sPageURL.split('&'),
+              sParameterName,
+              i;
+
+          for (i = 0; i < sURLVariables.length; i++) {
+            sParameterName = sURLVariables[i].split('=');
+
+            if (sParameterName[0] === sParam) {
+              return sParameterName[1] === undefined ? true : sParameterName[1];
+            }
+          }
+        };
+
         $(document).ready(function(){
+          var infusionAff = getUrlParameter('p');
+            if(infusionAff) setCookie('infusion_referrer', infusionAff, 30);
             if(location.hash.slice(1).length > 0) setCookie('dao_ref', location.hash.slice(1), 1);
         })
     </script>
