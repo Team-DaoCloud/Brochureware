@@ -73,4 +73,14 @@
   .btn {
     height: 40px;
   }
+
+  .dao-thanks {
+    display: none;
+  }
+
+  .dao-error {
+    color: red;
+    display: none;
+    padding: 15px 0;
+  }
 }
