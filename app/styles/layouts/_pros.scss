@@ -152,14 +152,13 @@ h2.connect-heading {
 }
 
 // Section 5 - 6-up display
-.dao-different {
-	background-color: $brand-dark-white;
-	margin-top: 50px;
+.dao-different-container {
+  color: $brand-gray;
 
-	.dao-diff-row {
-		margin-bottom: 40px;
-		@include clearfix;
-	}
+	h2 {
+    color: $brand-dark-gray1;
+    padding: 50px 0;
+  }
 
 	.dao-diff-row:nth-child(2) {
 		margin-bottom: 0;
@@ -167,15 +166,19 @@ h2.connect-heading {
 
 	p {
 		margin-left: 104px;
-	}
-
-	.dao-getstarted-content {
-		margin-top: 0;
+    max-height: 80px;
 	}
 
 	.btn-different-cta-kerning {
 		margin-left: 4px;
 	}
+}
+
+// Override
+.dao-getstarted-container.dao-getstarted-container-pros {
+  .dao-getstarted-content {
+    margin-top: 0;
+  }
 }
 
 .different-items {

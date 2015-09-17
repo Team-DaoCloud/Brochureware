@@ -182,79 +182,8 @@
 
 // Section 5 - Quotes
 // 2 column look, goes to 1 column on mobile
-.dao-quote-container {
-  background-color: $brand-light-gray2;
-  padding: 80px 0;
-
-  .dao-quote {
-    background-color: $brand-white;
-    border-radius: $base-border-radius;
-    min-height: 380px;
-    padding: 40px;
-    text-align: center;
-
-    @media (min-width: $screen-lg-min) {
-      text-align: left;
-    }
-  }
-
-  .dao-quote:last-child {
-    margin-top: 40px;
-
-    @media (min-width: $screen-sm-min) {
-      margin-top: 0;
-    }
-  }
-
-  .dao-quote-portrait {
-    border: 6px solid $brand-light-gray3;
-    border-radius: $base-border-radius;
-    display: inline-block;
-    height: 120px;
-    vertical-align: top;
-    width: 120px;
-  }
-
-  .dao-quote-metadata {
-    display: inline-block;
-    max-width: 300px;
-    padding-top: 20px;
-    vertical-align: top;
-
-    @media (min-width: $screen-xs-min) and (max-width: $screen-sm-min) {
-      padding-top: 0;
-      padding-left: 20px;
-    }
-
-    @media (min-width: $screen-sm-min) and (max-width: $screen-md-min) {
-      padding-top: 20px;
-      padding-left: 0;
-    }
-
-    @media (min-width: $screen-md-min) and (max-width: $screen-lg-min) {
-      max-width: none;
-    }
-
-    @media (min-width: $screen-lg-min) {
-      padding-top: 0;
-      padding-left: 20px;
-    }
-  }
-
-  .dao-quote-content {
-    color: $brand-gray;
-    font-size: $med;
-  }
-
-  h3 {
-    font-size: $norm;
-    margin-bottom: 5px;
-  }
-
-  .dao-quote-title {
-    color: $brand-gray;
-  }
-}
+// Reference components/_quotes.scss
+// Overrides only
 
 // Section 6a - Featured In
 // 5 column look
@@ -295,6 +224,7 @@
     padding: 35px;
     margin-top: 40px;
     margin-bottom: 40px;
+    text-align: center;
   }
 
   .dao-featuredin-blocks:last-child {
@@ -330,7 +260,6 @@
 
   h2 {
     margin-top: 0px;
-    text-align: left;
   }
 
   .dao-featuredin-blocks-content {

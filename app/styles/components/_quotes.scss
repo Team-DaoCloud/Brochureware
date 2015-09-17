@@ -1,0 +1,44 @@
+.dao-quote-container {
+  background-color: $brand-light-gray2;
+  padding: 80px 0;
+
+  .dao-quote {
+    background-color: $brand-white;
+    border-radius: $base-border-radius;
+    min-height: 380px;
+    padding: 40px;
+    text-align: center;
+  }
+
+  .dao-quote:last-child {
+    margin-top: 40px;
+
+    @media (min-width: $screen-sm-min) {
+      margin-top: 0;
+    }
+  }
+
+  .dao-quote-portrait {
+    border: 6px solid $brand-light-gray3;
+    border-radius: $base-border-radius;
+    display: inline-block;
+    height: 120px;
+    margin-bottom: 20px;
+    vertical-align: top;
+    width: 120px;
+  }
+
+  .dao-quote-content {
+    color: $brand-gray;
+    font-size: $med;
+  }
+
+  h3 {
+    font-size: $norm;
+    margin-bottom: 5px;
+  }
+
+  .dao-quote-title {
+    color: $brand-gray;
+  }
+}

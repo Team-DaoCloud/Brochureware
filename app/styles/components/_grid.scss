@@ -78,6 +78,11 @@ $grid-columns: 20;
   @include make-xs-column(20);
 }
 
+.dao-2up-feature {
+  @include make-xs-column(20);
+  @include make-sm-column(10);
+}
+
 // Section 3 - Explore Section
 // 2 column look, goes to 1 column on moblie
 .dao-explore-unit-1, .dao-explore-unit-2, .dao-explore-unit-3, .dao-explore-unit-4 {
@@ -97,6 +102,11 @@ $grid-columns: 20;
   @include make-xs-column-offset(2);
   @include make-sm-column(8.5);
   @include make-sm-column-offset(1);
+  @include make-lg-column(7);
+}
+
+.dao-quote-1 {
+  @include make-lg-column-offset(2.5);
 }
 
 // Section 6a - Featured In
@@ -122,15 +132,21 @@ $grid-columns: 20;
 //############# Pro Page #############
 //####################################
 
+// Section 3 - Different
+.dao-different-container {
+  @include make-xs-column(20);
+}
+
 // Section 4 - Screenshots
 .connect-copy {
   @include make-xs-column(20);
   @include make-sm-column(8);
+  @include make-sm-column-offset(2);
 }
 
 .connect-img {
   @include make-xs-column(20);
-  @include make-sm-column(12);
+  @include make-sm-column(10);
 }
 
 //######################################
