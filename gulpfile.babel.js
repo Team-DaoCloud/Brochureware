@@ -76,9 +76,6 @@ gulp.task('html', ['styles'], () => {
     .pipe($.if('*.css', $.minifyCss({compatibility: '*'})))
     .pipe(assets.restore())
     .pipe($.useref())
-    .pipe($.if('*.html', $.replace('scripts/main.js', '../scripts/main.js')))
-    .pipe($.if('*.html', $.replace('scripts/plugins.js', '../scripts/plugins.js')))
-    .pipe($.if('*.html', $.replace('scripts/vendor.js', '../scripts/vendor.js')))
     .pipe($.if('*.html', $.minifyHtml({conditionals: true, loose: true})))
     .pipe(gulp.dest('dist'));
 });
