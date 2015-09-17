@@ -1,0 +1,74 @@
+// Section 1a - Daocloud Banner Image
+// see: components/_banners.scss partial
+// Overrides to the component only here
+.dao-banner-image-content-ambassador {
+  background: url('../images/banners/landing-page-bg.jpg') no-repeat top center;
+  height: 57vh;
+}
+
+.dao-banner-text-container.dao-banner-text-container-ambassador {
+  h1 {
+    margin-bottom: 40px;
+
+    @media (min-width: $screen-xs-min) {
+      margin-bottom: 100px;
+    }
+    @media (min-width: $screen-sm-min) {
+      font-size: $xxxxlarge;
+    }
+  }
+}
+
+// Section 2 - 3-up Dao Features
+.dao-feature-icon-ambassador-3 img {
+  width: 30px;
+}
+
+// Section 4 - Affiliate Signup Form
+.dao-banner-image-content.dao-banner-image-content-ambassador-signup {
+  min-height: 540px;
+  margin-top: 0;
+}
+
+.dao-banner-image-content-ambassador-signup {
+  background: url('../images/banners/ambassadors-forest.jpg') no-repeat top center;
+}
+
+.dao-ambassador-form-content {
+  background-color: rgba(245,245,245,0.85);
+  border-radius: $base-border-radius;
+  margin-top: 30px;
+  padding: 20px;
+
+  h2 {
+    font-size: $med;
+    margin: 15px;
+  }
+
+  input {
+    border: 1px solid $brand-dark-gray1;
+    color: $brand-dark-gray1;
+    height: 40px;
+    margin: 25px 0;
+    padding: 5px 10px;
+  }
+
+  textarea {
+    border: 1px solid $brand-dark-gray1;
+    color: $brand-dark-gray1;
+  }
+
+  .btn {
+    height: 40px;
+  }
+
+  .dao-thanks {
+    display: none;
+  }
+
+  .dao-error {
+    color: red;
+    display: none;
+    padding: 15px 0;
+  }
+}
