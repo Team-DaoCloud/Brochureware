@@ -5,14 +5,6 @@
   background: url('../images/banners/pros-bg.jpg') no-repeat top center;
 }
 
-.dao-banner-text-container.dao-pro-title {
-	top: 8vh;
-
-	@media (min-width: $screen-xs-min) {
-		top: 20vh;
-	}
-}
-
 // Section 2 - 3-up Icon Features
 // leverages components/_features.scss
 // overrides here only

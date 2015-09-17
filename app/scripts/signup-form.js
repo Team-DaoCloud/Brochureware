@@ -1,10 +1,12 @@
+'use strict';
+
 // Function to get mailchimp sign-up working for /signup page
 (function($){
    $('#carousel-signup').carousel({
      interval: false
    });
 
-   $('#signup-form').submit(function(e){
+   $('#signup-form').submit(function(){
      $.ajax({
        url: 'http://DaoCloud.us10.list-manage.com/subscribe/post-json?u=69306ec03132e1e4026684c81&id=66656777a9&c=?',
        type: 'GET',

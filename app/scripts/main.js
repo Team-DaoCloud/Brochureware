@@ -1,5 +1,4 @@
 'use strict';
-/* global jQuery */
 
 // Sets up lettering.js span targets
 (function($) {
@@ -18,27 +17,27 @@
 
 // Switches visibility on subhead text for 4-up explore section on homepage
 (function($) {
-  $(".dao-explore-unit-1").hover(function() {
-    $(".dao-explore-unit-1-content").fadeIn("linear");
+  $('.dao-explore-unit-1').hover(function() {
+    $('.dao-explore-unit-1-content').fadeIn('linear');
   });
-  $(".dao-explore-unit-2").hover(function() {
-    $(".dao-explore-unit-2-content").fadeIn("linear");
+  $('.dao-explore-unit-2').hover(function() {
+    $('.dao-explore-unit-2-content').fadeIn('linear');
   });
-  $(".dao-explore-unit-3").hover(function() {
-    $(".dao-explore-unit-3-content").fadeIn("linear");
+  $('.dao-explore-unit-3').hover(function() {
+    $('.dao-explore-unit-3-content').fadeIn('linear');
   });
-  $(".dao-explore-unit-4").hover(function() {
-    $(".dao-explore-unit-4-content").fadeIn("linear");
+  $('.dao-explore-unit-4').hover(function() {
+    $('.dao-explore-unit-4-content').fadeIn('linear');
   });
-})(jQuery); 
+})(jQuery);
 
 // This function sets a cookie for InfusionSoft Affiliate tracking that lasts 30 days
 function setCookie(cname, cvalue, exdays) {
   var d = new Date();
-  d.setTime(d.getTime() + (exdays*24*60*60*1000));
-  var expires = "expires="+d.toUTCString()+';';
+  d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+  var expires = 'expires=' + d.toUTCString() + ';';
   var path = 'path=/';
-  document.cookie = cname + "=" + cvalue + "; " + expires + path;
+  document.cookie = cname + '=' + cvalue + '; ' + expires + path;
 }
 
 var getUrlParameter = function getUrlParameter(sParam) {
@@ -60,7 +59,11 @@ var getUrlParameter = function getUrlParameter(sParam) {
 (function($) {
   $(document).ready(function(){
     var infusionAff = getUrlParameter('p');
-    if(infusionAff) setCookie('infusion_referrer', infusionAff, 30);
-    if(location.hash.slice(1).length > 0) setCookie('dao_ref', location.hash.slice(1), 1);
-  })
+    if(infusionAff) {
+      setCookie('infusion_referrer', infusionAff, 30);
+    }
+    if(location.hash.slice(1).length > 0) {
+      setCookie('dao_ref', location.hash.slice(1), 1);
+    }
+  });
 })(jQuery);
