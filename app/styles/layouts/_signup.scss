@@ -41,8 +41,13 @@ hr {
 
 .signup-bg {
   background: url("../images/bg-mounts2.jpg") no-repeat left top;
+  background-size: cover;
   height: 100vh;
   padding-top: 100px;
+
+  @media (max-width: $screen-xs-min) {
+    background-position: fixed;
+  }
 }
 
 .margin10 {
@@ -50,6 +55,7 @@ hr {
 }
 
 .btn-wrap {
+  max-width: 500px;
   width: 60%;
   margin: 20px auto;
   @media (max-width: $screen-sm-min) {
