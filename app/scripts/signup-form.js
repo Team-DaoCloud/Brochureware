@@ -1,10 +1,8 @@
 'use strict';
 
 // Function to get mailchimp sign-up working for /signup page
-(function($){
-   $('#carousel-signup').carousel({
-     interval: false
-   });
+$(document).ready(function() {
+   $('#carousel-signup').carousel({interval: false});
 
    $('#signup-form').submit(function(){
      $.ajax({
@@ -42,4 +40,4 @@
    $('.item').css('min-height', function(){
      return $(document).height() - 400;
    });
-})(jQuery);
+});
