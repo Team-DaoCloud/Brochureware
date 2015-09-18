@@ -6,6 +6,10 @@
   $('.btn-cta-kerning').lettering();
   $('.btn-getstarted-cta-kerning').lettering();
   $('.btn-different-cta-kerning').lettering();
+
+  $('#toggle-video').click(function(){
+    $('#watch-video').modal('toggle');
+  });
 })(jQuery);
 
 // Gives us the current year
