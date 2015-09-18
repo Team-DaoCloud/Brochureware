@@ -63,7 +63,7 @@
        // Step 4
        // Now we use the lat/lon we retrieved against DaoCloud's endpoint
        $.ajax({
-         url: 'https://daotest.daocloud.com/api/v1/professional/showroom?lat=' + userLatitude + '&lng=' + userLongitude,
+         url: 'https://www.daocloud.com/api/v1/professional/showroom?lat=' + userLatitude + '&lng=' + userLongitude,
          type: 'GET',
          dataType: 'json',
          timeout: 3000,
