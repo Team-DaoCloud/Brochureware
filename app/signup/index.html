@@ -62,7 +62,7 @@
             <div class="navbar-right">
               <ul class="menu-utility-navigation list-inline">
                 <li class="item-1"><a href="../professionals">For Professionals</a></li>
-                <li class-"item-2"><a class="btn btn-default" href="#" role="button">Sign In</a></li>
+                <li class-"item-2"><a class="btn btn-default" href="../../signin" role="button">Sign In</a></li>
               </ul>
             </div>
           </nav>
@@ -80,11 +80,11 @@
                 <div class="dao-banner-text-subhead">Please select whether you are a wellness enthusiast or a wellness professional</div>
                 <div class="btn-wrap">
                   <button type="button" class="btn btn-default" data-target="#carousel-signup" data-slide-to="1">
-                    <span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;<span class="btn-cta-kerning">I'm a Wellness Enthusiast</span>
+                    <span class="btn-cta-kerning">I'm a Wellness Enthusiast</span>
                   </button>
                   <a href="../professionals">
                     <button type="button" class="btn btn-success btn-lg">
-                      <span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span>&nbsp;<span class="btn-cta-kerning">I'm a Wellness Professional</span></a>
+                      <span class="btn-cta-kerning">I'm a Wellness Professional</span></a>
                     </button>
                   </a>
                 </div>
@@ -92,22 +92,17 @@
             </div>
             <div class="item">
               <section class="signup-box" role="main">
-                <h3 class="dao-banner-text-headline">DaoCloud is currently in private beta. <br/> Request an invitation by filling out this form.</h3>
+                <h3 class="dao-banner-text-headline">DaoCloud is currently invite-only. <br/> Request an invitation by filling out this form.</h3>
                 <form id="signup-form" class="btn-wrap">
                   <div class="form-group">
-                    <input type="hidden" name="u" value="69306ec03132e1e4026684c81">
-                    <input type="hidden" name="id" value="66656777a9">
-                    <input type="hidden" name="orig-lang" value="1">
-                    <input type="hidden" name="MERGE2" class="form-control" value="test">
-                    <div id="form-first-name" class="form-group">
-                    <input type="text" name="MERGE1" class="form-control" placeholder="First and Last Name">
+                    <div id="form-name" class="form-group">
+                    <input type="text" name="NAME" class="form-control" placeholder="First and Last Name">
                     </div>
                     <div id="form-email" class="form-group">
-                    <input type="email" name="MERGE0" class="form-control" placeholder="Email Address">
+                    <input type="email" name="EMAIL" class="form-control" placeholder="Email Address">
                     </div>
                   </div>
-                  <div id="form-errors" class="form-group">
-                  </div>
+                  <div id="form-errors" class="form-group"></div>
                   <button class="btn btn-success" type="submit">Request Invitation</button>
                 </form>
               </section>
@@ -175,6 +170,7 @@
     <!-- bower:js -->
     <script src="/bower_components/jquery/dist/jquery.js"></script>
     <script src="/bower_components/Lettering.js/jquery.lettering.js"></script>
+    <script src="/bower_components/ajaxchimp/jquery.ajaxchimp.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -194,11 +190,15 @@
     <!-- endbuild -->
 
     <!-- build:js ../scripts/main.js -->
-    <script src="../scripts/affiliates-form.js"></script>
-    <script src="../scripts/ambassadors-form.js"></script>
-    <script src="../scripts/geolookup.js"></script>
     <script src="../scripts/main.js"></script>
+    <!-- endbuild -->
+
+    <!-- build:js ../scripts/signup-form.js -->
     <script src="../scripts/signup-form.js"></script>
+    <!-- endbuild -->
+
+    <!-- build:js ../scripts/geolookup.js -->
+    <script src="../scripts/geolookup.js"></script>
     <!-- endbuild -->
 
   </body>

@@ -20,7 +20,7 @@
 
           // Confirmation message, post then fade in div with message
           $('.dao-banner-text-headline-form').replaceWith('<h2>Thanks for Applying</h2>').fadeIn();
-          $('.dao-thanks').html('Thanks for your interest in the Daocloud Ambassador Program. One of our representatives will be in touch with you in the next couple of days.').show().fadeIn();
+          $('.dao-thanks').html('<p>Thanks for your interest in the DaoCloud Ambassador Program!</p><p>We are reviewing your application, and may invite you to a virtual interview.</p><p>Good luck!</p>').show().fadeIn();
         }
         else {
           $('.dao-error').html('Your information could not be transferred into the Daocloud Ambassador application database. You can try to submit your application again but if you continue to have trouble just drop us a line at team@daocloud.com. Thanks!');
@@ -41,7 +41,7 @@
     var lastname = name[1];
     var email = $(evt.target[1]).val();
     var phone = $(evt.target[2]).val();
-    var region = $(evt.target[3]).val();
+    var region = 'To Be Determined';
     var personType = 'Ambassador Prospect';
     submitForm(firstname, lastname, email, phone, region, personType);
   });

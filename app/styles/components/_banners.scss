@@ -1,7 +1,7 @@
 // Section 1a - Dao Banner durable class
 .dao-banner-image-content {
   background-size: cover;
-  height: 50vh;
+  height: 400px;
   padding: 0;
   margin-top: $base-navbar-offset-mobile;
   z-index: 1; // this element needs to be in the back
@@ -12,6 +12,10 @@
 
   @media (orientation: portrait) and (min-height: $screen-xs-min) {
     height: 450px;
+  }
+
+  @media (min-height: $screen-md-min) {
+    height: 50vh;
   }
 }
 
@@ -46,9 +50,13 @@
 
   h1 {
     color: $brand-white;
-    font-size: $xxxlarge;
+    font-size: $xxlarge;
     font-weight: bold;
     margin-top: 10px;
+
+    @media(min-width: $screen-xs-min) {
+      font-size: $xxxlarge;
+    }
   }
 
   .btn-cta-kerning {

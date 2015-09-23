@@ -3,6 +3,22 @@
 // Overrides to the component only here
 .dao-banner-image-content-pros {
   background: url('../images/banners/pros-bg.jpg') no-repeat top center;
+
+  @media (min-width: $screen-sm-min) {
+    height: 540px;
+  }
+}
+
+.dao-banner-text-container.dao-pro-title .dao-banner-text-headline {
+  @media (min-width: $screen-sm-min) {
+    margin-top: 80px;
+  }
+}
+
+.dao-banner-text-container.dao-pro-title .dao-banner-text-subhead {
+  @media (min-width: $screen-sm-min) {
+    margin-top: 140px;
+  }
 }
 
 // Section 2 - 3-up Icon Features
@@ -158,7 +174,10 @@ h2.connect-heading {
 
 	p {
 		margin-left: 104px;
-    max-height: 80px;
+
+    @media (min-width: $screen-sm-min) {
+      max-height: 80px;
+    }
 	}
 
 	.btn-different-cta-kerning {
@@ -175,6 +194,10 @@ h2.connect-heading {
 
 .different-items {
 	@include make-md-column(6.666);
+
+  @media (min-width: $screen-md-min) and (max-width: $screen-lg-min) {
+    margin-bottom: 60px;
+  }
 
 	img {
 		float: left;

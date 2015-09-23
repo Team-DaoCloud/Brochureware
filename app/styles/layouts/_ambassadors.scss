@@ -3,7 +3,6 @@
 // Overrides to the component only here
 .dao-banner-image-content-ambassador {
   background: url('../images/banners/landing-page-bg.jpg') no-repeat top center;
-  height: 57vh;
 }
 
 .dao-banner-text-container.dao-banner-text-container-ambassador {
@@ -163,6 +162,7 @@
 
   .dao-thanks {
     display: none;
+    text-align: center;
   }
 
   .dao-error {

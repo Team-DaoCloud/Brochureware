@@ -5,15 +5,15 @@
   background: url('../images/banners/affiliates-banner.jpg') no-repeat top center;
 
   @media (orientation: portrait) and (min-height: $screen-xs-min) {
-    height: 350px;
+    height: 450px;
   }
 }
 
 .dao-banner-text-container.dao-affiliate-title {
-	top: 12vh;
+	top: 120px;
 
 	@media (min-width: $screen-xs-min) {
-		top: 20vh;
+		top: 160px;
 	}
 }
 

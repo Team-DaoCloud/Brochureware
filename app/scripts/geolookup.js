@@ -37,13 +37,13 @@
       'geoProImageURL': 'https://s3.amazonaws.com/daocloudapp-prod/resources/picture/profile/photo-on-10-30-14-at-3-47-pm1414698445083_thumbnail.jpg'
     }
   ];
-  var proRegion = 'Around the Country';
+  var proRegion = 'You';
   var index, len;
 
   // Step 2a
   // Put ipinfo.io API into a jQuery Ajax call
   $.ajax({
-     url: 'http://ipinfo.io/geo/',
+     url: 'https://ipinfo.io?token=c0ef293720c323',
      type: 'POST',
      dataType: 'jsonp',
      timeout: 3000,

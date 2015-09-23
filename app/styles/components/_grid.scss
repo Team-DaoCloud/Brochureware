@@ -140,8 +140,8 @@ $grid-columns: 20;
 // Section 4 - Screenshots
 .connect-copy {
   @include make-xs-column(20);
-  @include make-sm-column(8);
-  @include make-sm-column-offset(2);
+  @include make-sm-column(10);
+  @include make-sm-column-offset(0);
 }
 
 .connect-img {
@@ -153,12 +153,21 @@ $grid-columns: 20;
 //############# Affiliates #############
 //######################################
 
-.dao-table, .dao-affiliate-signup, .dao-affiliate-form-content,
+.dao-affiliate-signup, .dao-affiliate-form-content,
 .dao-ambassador-signup, .dao-ambassador-form-content {
   @include make-xs-column(18);
   @include make-xs-column-offset(1);
   @include make-sm-column(10);
   @include make-sm-column-offset(5);
+}
+
+.dao-table {
+  @include make-xs-column(18);
+  @include make-xs-column-offset(1);
+  @include make-sm-column(8);
+  @include make-sm-column-offset(6);
+  @include make-md-column(6);
+  @include make-md-column-offset(7);
 }
 
 //###########################################

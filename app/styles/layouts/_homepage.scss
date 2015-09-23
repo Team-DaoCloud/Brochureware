@@ -3,7 +3,7 @@
 // Overrides to the component only here
 .dao-banner-image-content-homepage {
   background: url('../images/banners/landing-page-bg.jpg') no-repeat top center;
-  height: 57vh;
+  height: 400px;
 }
 
 .dao-banner-text-container.dao-banner-text-container-homepage {
@@ -17,14 +17,6 @@
       font-size: $xxxxlarge;
     }
   }
-}
-
-.dao-banner-text-container.dao-about-title {
-	top: 7vh;
-
-	@media (min-width: $screen-xs-min) {
-		top: 20vh;
-	}
 }
 
 // Section 2 - 3-up Icon Features

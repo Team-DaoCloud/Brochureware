@@ -52,7 +52,7 @@
             <div class="navbar-right">
               <ul class="menu-utility-navigation list-inline">
                 <li class="item-1"><a href="../professionals">For Professionals</a></li>
-                <li class-"item-2"><a class="btn btn-default" href="#" role="button">Sign In</a></li>
+                <li class-"item-2"><a class="btn btn-default" href="../../signin" role="button">Sign In</a></li>
               </ul>
             </div>
           </nav>
@@ -149,7 +149,7 @@
         <div class="dao-quote dao-quote-2">
           <img class="dao-quote-portrait" src="../images/team/kate-nelson.jpg" alt="Headshot of Kate Nelson" />
           <div class="dao-quote-metadata">
-            <div class="dao-quote-content">I loved being a Wellness Ambassador. I am proud to have worked for a company with a mission that resonates with me so deeply, and with people who are as committed to spreading wellness as I am.</div>
+            <div class="dao-quote-content">I loved being a Wellness Ambassador, and I gained a number of invaluable skills and experiences that will be beneficial in all my future career endeavors. I am proud to have worked for a company with a mission that resonates with me so deeply, and with people who are as committed to spreading wellness as I am.</div>
             <h3 class="dao-quote-name green-text">Kate Nelson</h3>
             <div class="dao-quote-title">Wellness Ambassador</div>
           </div>
@@ -168,8 +168,8 @@
               <form id="ambassador-form" class="ambassador-form-container">
                 <input type="text" name="name" placeholder="First and Last Name" id="input" class="form-control" value="" required="required">
                 <input type="text" name="email" placeholder="Email" id="input" class="form-control" value="" required="required">
-                <input type="text" name="phone" placeholder="LinkedIn Profile URL" id="input" class="form-control" value="" required="required">
-                <input type="text" name="region" placeholder="City and State" id="input" class="form-control" value="" required="required">
+                <input type="text" name="phone" placeholder="LinkedIn Profile URL or Resume URL (Public Google Doc is OK)" id="input" class="form-control" value="" required="required">
+                <!--<input type="text" name="region" placeholder="City and State" id="input" class="form-control" value="" required="required">-->
                 <button id="submit-ambassador" name="submit" type="submit" class="btn btn-success form-control">Apply</button>
               </form>
               <div class="dao-thanks"></div>
@@ -239,11 +239,12 @@
     <!-- endbuild -->
 
     <!-- build:js ../scripts/main.js -->
-    <script src="../scripts/affiliates-form.js"></script>
-    <script src="../scripts/ambassadors-form.js"></script>
-    <script src="../scripts/geolookup.js"></script>
     <script src="../scripts/main.js"></script>
-    <script src="../scripts/signup-form.js"></script>
     <!-- endbuild -->
+
+    <!-- build:js ../scripts/ambassadors-form.js -->
+    <script src="../scripts/ambassadors-form.js"></script>
+    <!-- endbuild -->
+
   </body>
 </html>

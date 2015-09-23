@@ -40,5 +40,9 @@
 
   .dao-quote-title {
     color: $brand-gray;
+
+    @media (min-width: $screen-md-min) {
+      padding: 0 30px;
+    }
   }
 }
