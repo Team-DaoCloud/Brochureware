@@ -7,6 +7,11 @@
   $('.btn-getstarted-cta-kerning').lettering();
   $('.btn-different-cta-kerning').lettering();
 
+  // Opens the watch video container on DaoCloud's homepage
+  $('#toggle-video').click(function(){
+    $('#watch-video').modal('toggle');
+  });
+
   // Opens the schedule demo modal on Daocloud's pro page
   $('#toggle-demo').click(function(){
     $('#schedule-demo').modal('toggle');
