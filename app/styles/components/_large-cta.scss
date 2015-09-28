@@ -1,0 +1,30 @@
+// Creates h2 title with large CTA w/ ample padding
+.dao-getstarted-container {
+  .dao-getstarted-content{
+    margin-top: 60px;
+    margin-bottom: 60px;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: $xxxlarge;
+    margin: 0 0 15px 0;
+  }
+
+  a, a:visited, a:active, a:focus {
+    color: $brand-white;
+  }
+
+  .btn {
+    padding: 20px 60px;
+    margin-top: 20px;
+
+    @media (max-width: $screen-xs-min) {
+      padding: 20px;
+    }
+  }
+
+  .glyphicon {
+    margin-right: 4px;
+  }
+}

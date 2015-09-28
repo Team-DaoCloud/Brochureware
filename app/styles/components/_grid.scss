@@ -1,0 +1,195 @@
+// Site Grid
+// Using scss bootstrap mixins to make the grid happen as necessary for different components
+// See more here: https://github.com/twbs/bootstrap-sass/blob/master/assets/stylesheets/bootstrap/mixins/_grid.scss
+
+//######################################
+//############# How to Use #############
+//######################################
+// Step 1 - Create bootstrap container in markup (ie: <div class="container"> or <div class="container-fluid")
+// Step 2 - Nest row container in bootstrap container (ie: <div class="dao-row-container">)
+// Step 3 - Assign row container make-row() mixin in this scss partial (ie: make-row();)
+// Step 4 - Nest column(s) containers in row container (ie: <div class="dao-column"></div>)
+// Step 5 - Make use of 4 mixins to generate columns (ie: make-xs-column(), make-sm-column(), make-md-column(), make-lg-column();)
+// Step 6 - Column mixin REQUIRES column number assignment to generate grid columns in your markup (ie: make-xs-column(18);)
+// Step 7 - Offset columns by using 4 offset mixins (ie: make-xs-column-offset(), make-sm-column-offset(), make-md-column-offset(), make-lg-column-offset();)
+// Step 8 - Offset mixin REQUIRES column number assignment, can be integer or decimal (ie: make-xs-column-offset(2);)
+
+//####################################
+//############# Dao Grid #############
+//####################################
+// This project is using a 20 column grid, not the typical 12 column grid of bootstrap
+// Each unit of the grid is now 1/20th of the old 12 column standard bootstrap grid (.6x)
+// (ie, If your standard 12-column, 960px grid is 80px columns, our 20 column grid has 48px columns)
+// To make this work, we reset grid mixin variable to 20
+// See more here: http://getbootstrap.com/css/#grid-less
+$grid-columns: 20;
+
+// Setup up global row style any section can use
+.dao-row {
+  @include make-row();
+}
+
+//##################################
+//############# Header #############
+//##################################
+// Grid for header area
+.logo {
+  @include make-sm-column(10);
+  @include make-md-column(12);
+  @include make-lg-column(14);
+}
+
+.utility {
+  @include make-sm-column(10);
+  @include make-md-column(8);
+  @include make-lg-column(6);
+}
+
+//##################################
+//############# Footer #############
+//##################################
+// Grid for footer area
+.footer-container-left {
+  @include make-xs-column(20);
+  @include make-sm-column(4);
+  @include make-md-column(6);
+}
+
+.footer-container-right {
+  @include make-xs-column(20);
+  @include make-sm-column(16);
+  @include make-md-column(14);
+}
+
+//######################################
+//############# Index.html #############
+//######################################
+// Section 1a - Banner Image,
+// Just one giant, responsive column
+.dao-banner-image-content {
+  @include make-sm-column(20);
+}
+
+// Section 1b - position:absolute; on top of the banner image
+
+// Section 2 - Daocloud Features
+// 3 column look with a 1 column offset, goes to 1 column on mobile
+.dao-feature {
+  @include make-xs-column(20);
+}
+
+.dao-2up-feature {
+  @include make-xs-column(20);
+  @include make-sm-column(10);
+}
+
+// Section 3 - Explore Section
+// 2 column look, goes to 1 column on moblie
+.dao-explore-unit-1, .dao-explore-unit-2, .dao-explore-unit-3, .dao-explore-unit-4 {
+  @include make-xs-column(16);
+  @include make-xs-column-offset(2);
+  @include make-sm-column(8.5);
+  @include make-sm-column-offset(1);
+}
+
+// Section 4 - Geolocated Pros
+// display:inline-block; layout, needed for carousel - leave it loose baby
+
+// Section 5 - Quotes
+// 2 column look, 1 on mobile
+.dao-quote {
+  @include make-xs-column(16);
+  @include make-xs-column-offset(2);
+  @include make-sm-column(8.5);
+  @include make-sm-column-offset(1);
+  @include make-lg-column(7);
+}
+
+.dao-quote-1 {
+  @include make-lg-column-offset(2.5);
+}
+
+// Section 6a - Featured In
+// 5 column look, goes to 1 column on mobile
+// no grid, display: inline-block;
+
+// Section 6b - Featured In Blocks
+// 2 column look, 1 on mobile
+.dao-featuredin-blocks {
+  @include make-xs-column(16);
+  @include make-xs-column-offset(2);
+  @include make-sm-column(8.5);
+  @include make-sm-column-offset(1);
+}
+
+// Section 7 - Getting Started
+// 1 big responsive column
+.dao-getstarted-content {
+  @include make-sm-column(20);
+}
+
+//####################################
+//############# Pro Page #############
+//####################################
+
+// Section 3 - Different
+.dao-different-container {
+  @include make-xs-column(20);
+}
+
+// Section 4 - Screenshots
+.connect-copy {
+  @include make-xs-column(20);
+  @include make-sm-column(10);
+  @include make-sm-column-offset(0);
+}
+
+.connect-img {
+  @include make-xs-column(20);
+  @include make-sm-column(10);
+}
+
+//######################################
+//############# Affiliates #############
+//######################################
+
+.dao-affiliate-signup, .dao-affiliate-form-content,
+.dao-ambassador-signup, .dao-ambassador-form-content {
+  @include make-xs-column(18);
+  @include make-xs-column-offset(1);
+  @include make-sm-column(10);
+  @include make-sm-column-offset(5);
+}
+
+.dao-table {
+  @include make-xs-column(18);
+  @include make-xs-column-offset(1);
+  @include make-sm-column(8);
+  @include make-sm-column-offset(6);
+  @include make-md-column(6);
+  @include make-md-column-offset(7);
+}
+
+//###########################################
+//############# Privacy / Terms #############
+//###########################################
+
+.dao-privacy-content {
+  @include make-xs-column(18);
+  @include make-xs-column-offset(1);
+  @include make-sm-column(16);
+  @include make-sm-column-offset(2);
+  @include make-lg-column(14);
+  @include make-lg-column-offset(3);
+}
+
+//#################################
+//############# About #############
+//#################################
+
+.dao-about-featuredin, .dao-about-picture-container, .dao-about-featuredin-blocks {
+  @include make-xs-column(18);
+  @include make-xs-column-offset(1);
+  @include make-sm-column(10);
+  @include make-sm-column-offset(5);
+}

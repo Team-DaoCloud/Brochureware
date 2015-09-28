@@ -1,0 +1,85 @@
+// Section 1a - Daocloud Banner Image
+// see: components/_banners.scss partial
+// Overrides to the component only here
+.dao-banner-image-content-about {
+  background: url('../images/banners/about-pg.jpg') no-repeat top center;
+}
+
+.dao-banner-text-container.dao-about-title {
+	top: 100px;
+
+	@media (min-width: $screen-xs-min) {
+		top: 160px;
+	}
+}
+
+// Section 2 - long form letter
+.dao-about-featuredin {
+  margin-bottom: 30px;
+}
+
+.dao-about-firstPletter {
+	font-size: $xxxxlarge;
+	color: $brand-green;
+	width: 45px;
+	float: left;
+}
+
+.dao-about-firstRow {
+	margin: 0 6px 0 -2px;
+}
+
+.dao-about-h2 {
+	text-align: left;
+}
+
+.dao-about-firstParagraph {
+	padding: 14px 0 0 0;
+	line-height: 1.4em;
+	font-size: $norm;
+}
+
+.dao-about-image1 {
+	margin: 75px auto;
+}
+
+.dao-about-paragraph {
+	padding: 0;
+	line-height: 1.4em;
+	font-size: $norm;
+}
+
+// Section 3 - email list
+.dao-about-contact-emails {
+  margin-top: 30px;
+  margin-botom: 30px;
+
+	dt {
+		font-weight: normal;
+		font-size: smaller;
+	}
+	dd {
+		padding-bottom: 20px;
+		a {
+			font-size: large;
+			color: $brand-green;
+		}
+	}
+	dt:first-child {
+		padding-top: 20px;
+	}
+}
+
+.dao-address {
+  margin-bottom: 30px;
+}
+
+.dao-about-title {
+	.dao-banner-text-subhead {
+		padding: 0 15%;
+	}
+}
+
+.dao-about-featuredin-blocks {
+	text-align: center;
+}

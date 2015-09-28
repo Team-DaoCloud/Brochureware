@@ -1,0 +1,173 @@
+// Section 1a - Daocloud Banner Image
+// see: components/_banners.scss partial
+// Overrides to the component only here
+.dao-banner-image-content-ambassador {
+  background: url('../images/banners/landing-page-bg.jpg') no-repeat top center;
+}
+
+.dao-banner-text-container.dao-banner-text-container-ambassador {
+  h1 {
+    margin-bottom: 40px;
+
+    @media (min-width: $screen-sm-min) {
+      font-size: $xxxxlarge;
+    }
+  }
+}
+
+.dao-banner-text-subhead.dao-banner-text-subhead-ambassador {
+  font-size: $xlarge;
+}
+
+// Section 2 - 3-up Dao Features
+.dao-feature-icon-ambassador-3 img {
+  width: 30px;
+}
+
+// Section 3 - 2x2 up
+.dao-2up-container-ambassadors {
+  background-color: $brand-true-white;
+  text-align: center;
+  padding-bottom: 60px;
+
+  .dao-2up-feature {
+    display: inline-block;
+    float: none;
+    margin: 0 20px;
+    max-width: 280px;
+    vertical-align: top;
+
+    // gives us three-wide on tablets and more desktops
+    @media (min-width: $screen-sm-min) {
+      max-width: 210px;
+    }
+
+    @media (min-width: $screen-md-min) {
+      max-width: 280px;
+    }
+
+    @media (min-width: $screen-lg-min) {
+      max-width: 340px;
+    }
+  }
+
+  .dao-2up-feature-icon {
+    display: inline-block;
+    margin: 60px 0 0 0;
+
+    @media (min-width: $screen-sm-min) {
+      margin: 60px 0 10px 0;
+    }
+
+    img {
+      height: 70px;
+      width: 70px;
+    }
+  }
+
+  h2 {
+    color: $brand-gray;
+    font-size: $large;
+    line-height: 1.3;
+    padding: 30px 20px;
+
+    @media (min-width: $screen-sm-min) {
+      padding: 30px 60px;
+    }
+
+    @media (min-width: $screen-lg-min) {
+      padding: 30px 220px;
+    }
+  }
+
+  h3 {
+    color: $brand-gray;
+    font-size: $med;
+  }
+
+  .dao-feature-subhead {
+    color: $brand-gray;
+    margin: 0 auto 10px auto;
+    max-width: 210px;
+    min-height: 45px;
+
+    @media (min-width: $screen-sm-min) {
+      margin: 0 auto;
+      min-height: 85px;
+    }
+  }
+
+  .green-text {
+    display: block;
+
+    @media (min-width: $screen-md-min) {
+      display: inline;
+    }
+  }
+}
+
+// Section 4 - 3-up Dao Features
+.dao-feature-container-ambassadors {
+  h3 {
+    color: $brand-gray;
+    font-size: $large;
+    padding-top: 40px;
+  }
+}
+
+// Section 5 - Quotes
+// See asset components/_quotes.scss
+// Overrides only here
+.dao-quote-container.dao-quote-container-ambassadors {
+  background-color: $brand-white;
+}
+
+// Section 6 - Ambassador Signup Form
+.dao-banner-image-content.dao-banner-image-content-ambassador-signup {
+  min-height: 540px;
+  margin-top: 0;
+}
+
+.dao-banner-image-content-ambassador-signup {
+  background: url('../images/banners/ambassadors-forest.jpg') no-repeat top center;
+}
+
+.dao-ambassador-form-content {
+  background-color: rgba(245,245,245,0.85);
+  border-radius: $base-border-radius;
+  margin-top: 30px;
+  padding: 20px;
+
+  h2 {
+    font-size: $med;
+    margin: 15px;
+  }
+
+  input {
+    border: 1px solid $brand-dark-gray1;
+    color: $brand-dark-gray1;
+    height: 40px;
+    margin: 25px 0;
+    padding: 5px 10px;
+  }
+
+  textarea {
+    border: 1px solid $brand-dark-gray1;
+    color: $brand-dark-gray1;
+  }
+
+  .btn {
+    height: 40px;
+  }
+
+  .dao-thanks {
+    display: none;
+    text-align: center;
+  }
+
+  .dao-error {
+    color: red;
+    display: none;
+    padding: 15px 0;
+  }
+}

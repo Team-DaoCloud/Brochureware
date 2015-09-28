@@ -1,0 +1,50 @@
+// Glyphicons font path
+$icon-font-path:        "../fonts/";
+
+// Colors
+$brand-green:           #6fb844;
+$brand-dark-green:      darken($brand-green, 5%);
+$brand-true-black:      #000;
+$brand-black:           #2f3235;
+$brand-dark-gray1:      #626262;
+$brand-dark-gray2:      #60656a;
+$brand-dark-gray3:      #707070;
+$brand-dark-gray4:      #6f747a;
+$brand-gray:            #a0a0a0;
+$brand-light-gray1:     #b7bdc2;
+$brand-light-gray2:     #d9d9d9;
+$brand-light-gray3:     #ededed;
+$brand-dark-white:      #f6f6f6;
+$brand-white:           #fbfbfb;
+$brand-true-white:      #fff;
+
+// Fonts
+$lato-family:           'Lato', Helvetica, Arial, sans-serif;
+$lato-normal-weight:    400;
+$lato-heavy-weight:     700;
+
+// Font scale
+$xxsmall:         8px;
+$xxsmall:         10px;
+$xsmall:          12px;
+$small:           14px;
+$norm:            16px;
+$med:             18px;
+$large:           22px;
+$larger:          26px;
+$xlarge:          30px;
+$xxlarge:         32px;
+$xxxlarge:        40px;
+$xxxxlarge:       48px;
+$reallybig:       64px;
+$tremendous:      80px;
+$absurd:          96px;
+
+// Spacing
+$base-border-radius: 3px !default;
+$base-font-size: $norm !default;
+$base-line-height: 1.6em !default;
+$base-line-height-headings: 1.3em !default;
+$base-spacing: 1.6em !default;
+$base-navbar-offset: 80px !default;
+$base-navbar-offset-mobile: 60px !default;

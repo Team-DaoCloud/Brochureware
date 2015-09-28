@@ -1,0 +1,43 @@
+.btn {
+  border-radius: $base-border-radius;
+  font-family: $lato-family;
+  text-transform: uppercase;
+
+  @media (max-width: $screen-xs-min) {
+    white-space: normal;
+  }
+}
+
+// Main ghost button
+.btn-default, .btn-default:visited, .btn-default:active, .btn-default:focus {
+  background-color: transparent;
+  border: 1px solid $brand-green;
+  color: $brand-green;
+  padding: 8px 32px;
+  @include transition(all 0.2s ease-in-out);
+}
+
+.btn-default:hover {
+  background-color: $brand-dark-white;
+  border: 1px solid $brand-green;
+  color: $brand-green;
+}
+
+
+// Main green button, leveraging 'success' buttons
+.btn-success, .btn-success:visited, .btn-success:active, .btn-success:focus {
+  background-color: $brand-green;
+  border: none;
+  color: $brand-white;
+  @include transition(all 0.2s ease-in-out);
+}
+
+.btn-success:hover {
+  background-color: $brand-dark-green;
+}
+
+// btn-lg customizations
+.btn-lg {
+  font-size: $small;
+  padding: 16px 24px;
+}

@@ -1,0 +1,24 @@
+.dao-table {
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  @media (min-width: $screen-sm-min) {
+    margin-top: 30px;
+    margin-bottom: 40px;
+  }
+
+  td {
+    color: $brand-gray;
+    font-size: $med;
+    padding: 10px 0;
+  }
+
+  td.dao-col-1 {
+    width: 80%;
+  }
+
+  td.dao-col-2 {
+    color: $brand-green;
+    width: 20%;
+  }
+}

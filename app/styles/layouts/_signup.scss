@@ -1,0 +1,79 @@
+// Whole page is just one giant section with JS controls
+#signup-page{
+  min-height: 100%;
+  position: relative;
+}
+.signup-box {
+  background: #fff;
+  border-radius: 3px;
+  box-shadow: 2px 2px 5px #999;
+  margin: 10px auto;
+  padding: 10px 30px 30px 30px;
+  width: 70%;
+  text-align: center;
+
+  @media (max-width: $screen-sm-min) {
+    width: 95%;
+    padding: 10px 5px 30px 5px;
+  }
+
+  .btn-default {
+    padding-top: 14px;
+    padding-bottom: 14px;
+    margin-bottom: 20px;
+  }
+
+  .btn-success {
+    a, a:active, a:visited, a:focus {
+      color: $brand-white;
+    }
+
+    a:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+hr {
+  height: 1px;
+  border: 0;
+}
+
+.signup-bg {
+  background: url("../images/bg-mounts2.jpg") no-repeat left top;
+  background-size: cover;
+  height: 100vh;
+  padding-top: 100px;
+
+  @media (max-width: $screen-xs-min) {
+    background-position: fixed;
+  }
+}
+
+.margin10 {
+  margin-bottom: 10px;
+}
+
+.btn-wrap {
+  max-width: 500px;
+  width: 60%;
+  margin: 20px auto;
+  @media (max-width: $screen-sm-min) {
+    width: 70%;
+  }
+  @media (max-width: $screen-xs-min) {
+    width: 100%;
+  }
+}
+
+.btn-fb {
+  background: #37559b;
+  color: #fff;
+  border-radius: 0;
+}
+
+.btn-tw {
+  background: #00a8f2;
+  color: #fff;
+  border-radius: 0;
+}

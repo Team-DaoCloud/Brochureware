@@ -1,0 +1,86 @@
+// Section 1 - Banner
+// Leverages components/_banners.scss
+// overrides only here
+.dao-banner-image-content-affilate {
+  background: url('../images/banners/affiliates-banner.jpg') no-repeat top center;
+
+  @media (orientation: portrait) and (min-height: $screen-xs-min) {
+    height: 450px;
+  }
+}
+
+.dao-banner-text-container.dao-affiliate-title {
+	top: 120px;
+
+	@media (min-width: $screen-xs-min) {
+		top: 160px;
+	}
+}
+
+// Section 2 - Pricing Table
+// Leverages components/_table.scss
+// overrides only here
+.dao-table-container {
+  background-color: $brand-dark-white;
+}
+
+.dao-affiliate-signup-container {
+  .dao-banner-image-content {
+    margin-top: 0;
+    min-height: 500px;
+  }
+}
+
+// Section 3 - 3-up Features
+// Uses components/_features.scss
+.dao-feature-container-affiliates {
+  background-color: $brand-true-white;
+
+  .dao-feature-pros-icon {
+    img {
+      height: auto;
+    }
+
+    @media (min-width: $screen-sm-min) {
+      margin-bottom: 0px;
+    }
+  }
+}
+
+// Section 4 - Affiliate Signup Form
+.dao-banner-image-content-affilate-signup {
+  background: url('../images/banners/affiliates-apply-banner.jpg') no-repeat top center;
+}
+
+.dao-affiliate-form-content {
+  background-color: rgba(245,245,245,0.85);
+  border-radius: $base-border-radius;
+  margin-top: 50px;
+  padding: 20px;
+
+  h2 {
+    margin: 15px;
+  }
+
+  input {
+    border: 1px solid $brand-dark-gray1;
+    color: $brand-dark-gray1;
+    height: 40px;
+    margin: 25px 0;
+    padding: 5px 10px;
+  }
+
+  .btn {
+    height: 40px;
+  }
+
+  .dao-thanks {
+    display: none;
+  }
+
+  .dao-error {
+    color: red;
+    display: none;
+    padding: 15px 0;
+  }
+}

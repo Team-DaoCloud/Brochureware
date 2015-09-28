@@ -1,0 +1,65 @@
+// Section 1a - Dao Banner durable class
+.dao-banner-image-content {
+  background-size: cover;
+  height: 400px;
+  padding: 0;
+  margin-top: $base-navbar-offset-mobile;
+  z-index: 1; // this element needs to be in the back
+
+  @media (min-width: $screen-md-min) {
+    margin-top: $base-navbar-offset;
+  }
+
+  @media (orientation: portrait) and (min-height: $screen-xs-min) {
+    height: 450px;
+  }
+
+  @media (min-height: $screen-md-min) {
+    height: 50vh;
+  }
+}
+
+// Section 1b - Daocloud Banner Content (positioned on top of banner image)
+.dao-banner-text-container {
+  color: $brand-white;
+  margin: 0 auto;
+  padding: 0 10px;
+  position: absolute;
+  top: 100px;
+  text-align: center;
+  width: 100%;
+  z-index: 2;
+
+  @media (min-width: $screen-xs-min) {
+    padding: 0;
+    top: 120px;
+  }
+
+  .dao-banner-text-intro {
+    text-transform: uppercase;
+
+    span {
+      padding: 0 3px;
+    }
+  }
+
+  .dao-banner-text-subhead {
+    font-size: $norm;
+    margin: 28px 0 12px 0;
+  }
+
+  h1 {
+    color: $brand-white;
+    font-size: $xxlarge;
+    font-weight: bold;
+    margin-top: 10px;
+
+    @media(min-width: $screen-xs-min) {
+      font-size: $xxxlarge;
+    }
+  }
+
+  .btn-cta-kerning {
+    margin-left: 4px;
+  }
+}

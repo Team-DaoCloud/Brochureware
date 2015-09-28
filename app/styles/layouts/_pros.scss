@@ -1,0 +1,229 @@
+// Section 1a - Daocloud Banner Image
+// see: components/_banners.scss partial
+// Overrides to the component only here
+.dao-banner-image-content-pros {
+  background: url('../images/banners/pros-bg.jpg') no-repeat top center;
+
+  @media (min-width: $screen-sm-min) {
+    height: 540px;
+  }
+}
+
+.dao-banner-text-container.dao-pro-title .dao-banner-text-headline {
+  @media (min-width: $screen-sm-min) {
+    margin-top: 80px;
+  }
+}
+
+.dao-banner-text-container.dao-pro-title .dao-banner-text-subhead {
+  @media (min-width: $screen-sm-min) {
+    margin-top: 140px;
+  }
+}
+
+// Section 2 - 3-up Icon Features
+// leverages components/_features.scss
+// overrides here only
+.dao-feature-container-pros {
+	background-color: $brand-true-white;
+}
+
+.dao-feature-pros-icon {
+  display: inline-block;
+  margin: 60px 0 0 0;
+
+  @media (min-width: $screen-sm-min) {
+    margin: 60px 0 20px 0;
+  }
+
+	img {
+	  height: 55px;
+	  width: auto;
+	}
+}
+
+// Section 3 - Partners Logos
+.partner-logos-container {
+  background-color: $brand-dark-white;
+  text-align: center;
+  padding: 30px 10px 70px;
+
+  ul {
+  	list-style-type: none;
+  	margin: 0;
+  	padding: 0;
+  }
+  li {
+  	display: inline-block;
+  	margin: 40px 40px 0;
+  	height: auto;
+
+  	a {
+  		text-decoration: none;
+  	}
+  }
+  h2 {
+  	font-size: $norm;
+		margin: 0 0 10px;
+  	padding: 0;
+  }
+}
+
+// Section 4- Connect with the Network Section
+h2.connect-heading {
+	margin: 30px;
+}
+
+.connect-wrapper {
+	.nav > li > a {
+		margin-bottom: 10px;
+		padding: 5px;
+
+		@media (min-width: $screen-sm-min) {
+			padding: 15px;
+		}
+	}
+
+	.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+		background-color: $brand-light-gray3;
+		color: $brand-dark-gray1;
+	}
+}
+
+.connect-copy {
+	text-align: center;
+
+	@media (min-width: $screen-sm-min) {
+	  text-align: left;
+	}
+
+	@media (min-width: $screen-md-min) {
+	  padding-right: 50px;
+	}
+
+	.hide-content {
+		@media (min-width: $screen-md-min) {
+			display: inline;
+		}
+	}
+
+	.hide-content-heading {
+		display: none;
+
+		@media (min-width: $screen-sm-min) {
+			display: inline;
+		}
+	}
+
+	p {
+		display: none;
+
+		@media (min-width: $screen-sm-min) {
+			display: inline;
+		}
+	}
+
+	.nav-pills > li {
+		float: none;
+
+		@media (min-width: $screen-sm-min) {
+			float: left;
+		}
+	}
+
+	.nav > li {
+		display: inline-block;
+
+		@media (min-width: $screen-sm-min) {
+			display: block;
+		}
+	}
+}
+
+.connect-img {
+	img {
+		@media (min-width: $screen-sm-min) {
+			margin-top: 60px;
+		}
+	}
+}
+
+.connect-text {
+	padding: 15px 25px 15px 15px;
+}
+
+.promotional-text {
+	background-color: $brand-dark-white;
+	h3 {
+		color: $brand-green;
+	}
+}
+
+// Section 5 - 6-up display
+.dao-different-container {
+  color: $brand-gray;
+
+	h2 {
+    color: $brand-dark-gray1;
+    padding: 50px 0;
+  }
+
+	.dao-diff-row:nth-child(2) {
+		margin-bottom: 0;
+	}
+
+	p {
+		margin-left: 104px;
+
+    @media (min-width: $screen-sm-min) {
+      max-height: 80px;
+    }
+	}
+
+	.btn-different-cta-kerning {
+		margin-left: 4px;
+	}
+}
+
+// Override
+.dao-getstarted-container.dao-getstarted-container-pros {
+  .dao-getstarted-content {
+    margin-top: 0;
+  }
+}
+
+.different-items {
+	@include make-md-column(6.666);
+
+  @media (min-width: $screen-md-min) and (max-width: $screen-lg-min) {
+    margin-bottom: 60px;
+  }
+
+	img {
+		float: left;
+		margin: 0 20px 100px 0;
+	}
+
+	h3 {
+		margin-top: 0;
+	}
+
+	@media (max-width: $screen-md-min) {
+		margin-bottom: 40px;
+
+		img {
+			margin: 0 20px 30px 0;
+		}
+	}
+}
+
+.dao-getstarted-content {
+	h4 {
+		font-size: $norm;
+
+		a, a:active, a:visited, a:focus, a:hover {
+		  color: $brand-dark-gray4;
+			text-decoration: none;
+		}
+	}
+}

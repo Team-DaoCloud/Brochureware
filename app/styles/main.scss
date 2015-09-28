@@ -1,0 +1,33 @@
+$icon-font-path: '../fonts/';
+
+// bower:scss
+@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+// endbower
+
+// If you add another scss partial, you have to add it below here for it to be compiled
+// Don't put anything up in the bower section
+
+// Global Components
+@import "components/_variables";
+@import "components/_grid";
+@import "components/_resets";
+@import "components/_dao-buttons";
+
+// SCSS chunks you can reuse
+@import "components/_header";
+@import "components/_footer";
+@import "components/_large-cta";
+@import "components/_features";
+@import "components/_table";
+@import "components/_banners";
+@import "components/_quotes";
+
+// Page-specific styles
+@import "layouts/_homepage";
+@import "layouts/_pros";
+@import "layouts/_investors";
+@import "layouts/_affiliates";
+@import "layouts/_privacy-terms";
+@import "layouts/_about";
+@import "layouts/_signup";
+@import "layouts/_ambassadors";
