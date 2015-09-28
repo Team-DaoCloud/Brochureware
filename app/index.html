@@ -325,5 +325,13 @@
     <!-- build:js scripts/signup-form.js -->
     <script src="scripts/signup-form.js"></script>
     <!-- endbuild -->
+
+    <script>
+      // Opens the watch video container on DaoCloud's homepage
+      // Included here because minification breaks this code
+      $('#toggle-video').click(function(){
+        $('#watch-video').modal('toggle');
+      });
+    </script>
   </body>
 </html>

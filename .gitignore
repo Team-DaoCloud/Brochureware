@@ -1,10 +1,7 @@
 node_modules
 dist
-<<<<<<< HEAD
-scripts
 =======
 .tmp
 .sass-cache
 bower_components
 test/bower_components
->>>>>>> 230e05290ceae3c03f9cd355c9b967995152583c
