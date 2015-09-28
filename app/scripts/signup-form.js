@@ -6,6 +6,11 @@
    $('#carousel-signup').carousel({interval: false});
 
    $('#signup-form').submit(function(){
+     var firstName = $('#full-name').val().split(' ').slice(0, -1).join(' ');
+     var lastName = $('#full-name').val().split(' ').slice(-1).join(' ');
+     $('<input type="hidden" name="FNAME" value="'+firstName+'"/>').appendTo('#signup-form');
+     $('<input type="hidden" name="LNAME" value="'+lastName+'"/>').appendTo('#signup-form');
+
      $.ajax({
        url: 'https://DaoCloud.us10.list-manage.com/subscribe/post-json?u=69306ec03132e1e4026684c81&id=66656777a9&id=60a8626400&c=?',
        type: 'GET',
