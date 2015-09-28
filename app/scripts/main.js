@@ -6,6 +6,11 @@
   $('.btn-cta-kerning').lettering();
   $('.btn-getstarted-cta-kerning').lettering();
   $('.btn-different-cta-kerning').lettering();
+
+  // Opens the schedule demo modal on Daocloud's pro page
+  $('#toggle-demo').click(function(){
+    $('#schedule-demo').modal('toggle');
+  });
 })(jQuery);
 
 // Gives us the current year
