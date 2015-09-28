@@ -14,7 +14,7 @@
 
   // Opens the schedule demo modal on Daocloud's pro page
   $('#toggle-demo').click(function(){
-    $('#schedule-demo').modal('show');
+    $('#schedule-demo').modal('toggle');
   });
 })(jQuery);
 
