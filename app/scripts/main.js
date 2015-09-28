@@ -7,7 +7,7 @@
   $('.btn-getstarted-cta-kerning').lettering();
   $('.btn-different-cta-kerning').lettering();
 
-  // Opens the watch video container on DaoCloud's homepage
+  //Opens the watch video container on DaoCloud's homepage
   $('#toggle-video').click(function(){
     $('#watch-video').modal('toggle');
   });
