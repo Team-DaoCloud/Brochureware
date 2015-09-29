@@ -7,7 +7,7 @@
   $('.btn-getstarted-cta-kerning').lettering();
   $('.btn-different-cta-kerning').lettering();
 
-  //Opens the watch video container on DaoCloud's homepage
+  // Opens the watch video container on DaoCloud's homepage
   $('#toggle-video').click(function(){
     $('#watch-video').modal('toggle');
   });
@@ -16,13 +16,6 @@
   $('#toggle-demo').click(function(){
     $('#schedule-demo').modal('toggle');
   });
-})(jQuery);
-
-// Gives us the current year
-(function($) {
-  var currentTime = new Date();
-  var currentYear = currentTime.getFullYear();
-  $('.current-year').append(currentYear);
 })(jQuery);
 
 // Switches visibility on subhead text for 4-up explore section on homepage
