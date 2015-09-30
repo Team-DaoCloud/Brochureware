@@ -38,7 +38,7 @@
     <![endif]-->
 
     <!-- Modal for Watching DaoCloud Video -->
-    <div class="modal fade" id="watch-video" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal fade" id="watch-video" tabindex="-1" role="dialog" aria-labelledby="Watch DaoCloud's Introductory Video">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
@@ -82,6 +82,9 @@
         <div class="dao-banner-image-content dao-banner-image-content-homepage img-responsive"></div>
       </div>
     </section>
+
+    <!--This hidden button allows the modal to catch - for whatever reason Bootstrap will not allow the first button to open a modal -->
+      <button type="button" id="toggle-video" class="hidden" data-toggle="modal" data-target="watch-video"></button>
 
     <section class="dao-banner-text-container dao-banner-text-container-homepage" role="main">
       <div class="dao-banner-text-intro">Connect with the</div>

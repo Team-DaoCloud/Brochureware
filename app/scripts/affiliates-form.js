@@ -31,7 +31,7 @@
   // Step 2
   // Grabbing variables from page and putting them into submission method
   $('.affiliate-form-container').submit(function(evt){
-    // Prevents For Submission, will be called with jQuery .ajax
+    // Prevents Form Submission, will be called with jQuery .ajax
     evt.preventDefault();
 
     // Setup variables from .affiliate-form-container
