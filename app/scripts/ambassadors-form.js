@@ -45,6 +45,4 @@
     var personType = 'Ambassador Prospect';
     submitForm(firstname, lastname, email, phone, region, personType);
   });
-
-
 })(jQuery);

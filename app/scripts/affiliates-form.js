@@ -1,5 +1,6 @@
 'use strict';
 
+// Posting  Email, First Name, Last Name, Phone & Region to InfusionSoft API
 (function($) {
   // Step 1
   // Function to submit data to InfusionSoft
@@ -19,7 +20,7 @@
 
           // Confirmation message, post then fade in div with message
           $('.dao-banner-text-headline-form').replaceWith('<h2>Thanks for Applying</h2>').fadeIn();
-          $('.dao-thanks').html('Thanks for your interest in the Daocloud Referral Partner Program. One of our representatives will be in touch with you in the next couple of days.').show().fadeIn();
+          $('.dao-thanks').html('<p>Thanks for your interest in the DaoCloud Referral Partner Program!</p><p>One of our representatives will be in touch with you in the next couple of days.</p>').show().fadeIn();
         }
         else {
           $('.dao-error').html('Your information could not be transferred into the Daocloud Referral Partner application database. You can try to submit your application again but if you continue to have trouble just drop us a line at team@daocloud.com. Thanks!');
