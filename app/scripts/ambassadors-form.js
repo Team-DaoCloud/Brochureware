@@ -6,11 +6,11 @@
   // Function to submit data to InfusionSoft
   // Note: we submit to Daocloud's node.js wrapper of the infusionSoft API
   // Params: first name, last name, email, phone, region and personType to be sent to api
-  function submitForm(firstname, lastname, email, website, personType, leadsource, tag) {
+  function submitForm(firstname, lastname, email, website, personType, leadSource, tag) {
     $.ajax({
       type: 'POST',
-      url: 'https://daotest.daocloud.com/api/v1/regions',
-      data: { firstName: firstname, lastName: lastname, email: email, website: website, personType: personType, leadsource: leadsource, tag: tag }
+      url: 'https://www.daocloud.com/api/v1/regions',
+      data: { firstName: firstname, lastName: lastname, email: email, website: website, personType: personType, leadSource: leadSource, tag: tag }
     }).done(function(msg)
       {
         if(msg === 'OK'){
@@ -42,8 +42,8 @@
     var email = $(evt.target[1]).val();
     var website = $(evt.target[2]).val();
     var personType = 'Ambassador Prospect';
-    var leadsource = "Website";
-    var tag = "200"; // ID for 'Ambassador Applicant'
-    submitForm(firstname, lastname, email, website, personType, leadsource, tag);
+    var leadSource = "Website";
+    var tag = 200; // ID for 'Ambassador Applicant'
+    submitForm(firstname, lastname, email, website, personType, leadSource, tag);
   });
 })(jQuery);
