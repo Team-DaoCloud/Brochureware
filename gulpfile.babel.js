@@ -15,25 +15,6 @@ var concat = require('gulp-concat');
 var handlebars = require('gulp-handlebars');
 var replace = require('gulp-replace');
 
-// This doesnt do anything just yet but it might in the future if we use handlebars for some templating
-gulp.task('partials', function() {
-  // Assume all partials start with an underscore
-  // You could also put them in a folder such as source/templates/partials/*.hbs
-  gulp.src(['app/templates/_*.hbs'])
-    .pipe(handlebars())
-    .pipe(wrap('Handlebars.registerPartial(<%= processPartialName(file.relative) %>, Handlebars.template(<%= contents %>));', {}, {
-      imports: {
-        processPartialName: function(fileName) {
-          // Strip the extension and the underscore
-          // Escape the output with JSON.stringify
-          return JSON.stringify(path.basename(fileName, '.js').substr(1));
-        }
-      }
-    }))
-    .pipe(concat('partials.js'))
-    .pipe(gulp.dest('dist/scripts/'));
-});
-
 gulp.task('styles', () => {
   return gulp.src('app/styles/*.scss')
     .pipe($.plumber())
@@ -183,7 +164,7 @@ gulp.task('wiredep', () => {
     .pipe(gulp.dest('app'));
 });
 
-gulp.task('build', ['lint', 'html', 'images', 'partials', 'fonts', 'extras'], () => {
+gulp.task('build', ['html', 'images', 'fonts', 'extras'], () => {
   return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
 });
 

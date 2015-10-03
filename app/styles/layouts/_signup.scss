@@ -40,14 +40,10 @@ hr {
 }
 
 .signup-bg {
-  background: url("../images/bg-mounts2.jpg") no-repeat left top;
+  background: url("../images/bg-mounts2.jpg") no-repeat center center;
   background-size: cover;
-  height: 100vh;
+  background-attachment: fixed;
   padding-top: 100px;
-
-  @media (max-width: $screen-xs-min) {
-    background-position: fixed;
-  }
 }
 
 .margin10 {

@@ -18,6 +18,13 @@
   });
 })(jQuery);
 
+// Gives us the current year
+(function($) {
+  var currentTime = new Date();
+  var currentYear = currentTime.getFullYear();
+  $('.current-year').append(currentYear);
+})(jQuery);
+
 // Switches visibility on subhead text for 4-up explore section on homepage
 (function($) {
   $('.dao-explore-unit-1').hover(function() {
