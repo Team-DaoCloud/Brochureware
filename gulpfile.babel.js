@@ -58,7 +58,7 @@ gulp.task('html', ['styles'], () => {
     .pipe(assets.restore())
     .pipe($.useref())
     .pipe($.if('*.html', $.minifyHtml({conditionals: true, loose: true})))
-    .pipe(gulp.dest('dist'));
+    .pipe(gulp.dest('prod'));
 });
 
 gulp.task('images', () => {
@@ -74,7 +74,7 @@ gulp.task('images', () => {
       console.log(err);
       this.end();
     })))
-    .pipe(gulp.dest('dist/images'));
+    .pipe(gulp.dest('prod/images'));
 });
 
 gulp.task('fonts', () => {
@@ -82,7 +82,7 @@ gulp.task('fonts', () => {
     filter: '**/*.{eot,svg,ttf,woff,woff2}'
   }).concat('app/fonts/**/*'))
     .pipe(gulp.dest('.tmp/fonts'))
-    .pipe(gulp.dest('dist/fonts'));
+    .pipe(gulp.dest('prod/fonts'));
 });
 
 gulp.task('extras', () => {
@@ -91,10 +91,10 @@ gulp.task('extras', () => {
     '!app/*.html'
   ], {
     dot: true
-  }).pipe(gulp.dest('dist'));
+  }).pipe(gulp.dest('prod'));
 });
 
-gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
+gulp.task('clean', del.bind(null, ['.tmp', 'prod']));
 
 gulp.task('serve', ['styles', 'fonts'], () => {
   browserSync({
@@ -121,12 +121,12 @@ gulp.task('serve', ['styles', 'fonts'], () => {
   gulp.watch('bower.json', ['wiredep', 'fonts']);
 });
 
-gulp.task('serve:dist', () => {
+gulp.task('serve:prod', () => {
   browserSync({
     notify: false,
     port: 9000,
     server: {
-      baseDir: ['dist']
+      baseDir: ['prod']
     }
   });
 });
@@ -165,7 +165,7 @@ gulp.task('wiredep', () => {
 });
 
 gulp.task('build', ['html', 'images', 'fonts', 'extras'], () => {
-  return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
+  return gulp.src('prod/**/*').pipe($.size({title: 'build', gzip: true}));
 });
 
 gulp.task('default', ['clean'], () => {

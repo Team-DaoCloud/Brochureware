@@ -21,14 +21,16 @@ Since we are using the Yeoman generator, I'm copying it's features into this rep
 
 Again, this comes straight from the Yeoman generator page. I added in some stuff to make handlebars templates work.
 
-- Install dependencies: `npm install --global yo gulp bower handlebars`
+- Install dependencies: `npm install --global yo gulp bower babel-core browser-sync`
 - Install the generator: `npm install --global generator-gulp-webapp`
+- Install bower dependencies: `bower install jquery bootstrap-sass Lettering.js`
 - Run `yo gulp-webapp` to scaffold your webapp
 - Run `gulp serve` to preview and watch for changes
-- Run `bower install --save <package>` to install frontend dependencies
 - Run `gulp serve:test` to run the tests in the browser
 - Run `gulp` to build your webapp for production
-- Run `gulp serve:dist` to preview the production build
+- Run `gulp build` for production build
+
+If you are having troubles building the project, you are probably missing NPM packages. Check the [Yeoman project](https://github.com/yeoman/generator-gulp-webapp).
 
 ## Branching Protocol and Task Management
 
@@ -37,6 +39,41 @@ Again, this comes straight from the Yeoman generator page. I added in some stuff
 - Naming the branch should use Trello cards' unique ID + hyphen + the general task at hand. You can find the Trello card unique ID in the URL string.
 - An example branch name: `alEzNIPR-ie8bug`
 - Branch should be pushed up to master and only merged after being given a `+1` by a teammate. Obviously, if it's something mission critical, do what you have to do to get it online.
+
+## Sequence for Deployment
+- On the main Daocloud-landing-page repo, you will need to follow this sequence to commit deploy this code.
+
+#### 1- Save and merge your changes to master
+```
+git add file-name-here file2-name-here
+git commit -m "Commit Message"
+git checkout master
+git merge your-branch-here
+```
+
+#### 2- Run, commit and push the build (will put all code into `prod` and push to https://github.com/jserrao/DaoCloud-Landing-Page)
+```
+gulp build
+git commit -m "Build #####"
+git push origin master
+```
+
+#### 3- Update git submodule on `next-release` branch in main DaoCloud project (folder of submodule is daocloud/brochure)
+```
+cd daocloud/brochure
+git pull origin master
+cd ..
+git submodule init
+git submodule update
+git submodule update --remote (response from this command should match brochureware repo latest commit)
+git add .
+git commit -m "Updated brochureware site"
+```
+
+#### 4- Deploy `next-release` branch to test branch
+```
+git push heroku-test next-release:master
+```
 
 ## Other Things to Note
 
