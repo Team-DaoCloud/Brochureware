@@ -77,7 +77,7 @@ git push heroku-test next-release:master
 
 ## Other Things to Note
 
-- This site is version 4 of the Daocloud landing page and we are deploying off the `v4` branch. Please branch off of `v4` for your work.
+- This site is version 4 of the Daocloud landing page and we are deploying off the `master` branch. Please branch off of `master` for your work.
 - The last version of the site can be found on the `v2` branch.
 - Where is v3 you might be asking? It was a version of this site that never came to be, but it spent significant time in design so I thought we should skip that version number. Not semantic but logical.
 - Browsersync is incredible, take advantage of how easy it makes testing on multiple devices.
