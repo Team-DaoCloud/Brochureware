@@ -44,6 +44,7 @@ hr {
   background-size: cover;
   background-attachment: fixed;
   padding-top: 100px;
+  min-height: 100vh;
 }
 
 .margin10 {
@@ -72,4 +73,12 @@ hr {
   background: #00a8f2;
   color: #fff;
   border-radius: 0;
+}
+
+// Override
+.dao-geopro-container.dao-geopro-signup {
+  .dao-geopro {
+    margin: 20px 40px;
+    width: 200px;
+  }
 }
