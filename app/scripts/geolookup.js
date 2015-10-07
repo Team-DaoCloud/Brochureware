@@ -56,10 +56,6 @@
        var userLongitude = userLocationSplit[1];
        var userRegion = longLatRegionFromIP.city;
 
-       // Step 3b
-       // Assign section heading with userRegion
-       $('.dao-geopro-city').html(userRegion);
-
        // Step 4
        // Now we use the lat/lon we retrieved against DaoCloud's endpoint
        $.ajax({
@@ -69,20 +65,44 @@
          timeout: 3000,
          success: function(daoResponse) {
            // Step 5a
-           // Loop through the json object response (daoResponse) and insert pro info into HTML
-           for (index = 0, len = 4; index < len; ++index) {
-             var daoCurrentGeoPro = 'dao-geopro-' + index;
-             $('.' + daoCurrentGeoPro + ' .dao-geopro-name').html(daoResponse[index].user.fullName);
-             $('.' + daoCurrentGeoPro + ' .dao-geopro-title').html((daoResponse[index].user.professionalTitles).join(', '));
-             $('.' + daoCurrentGeoPro + ' .dao-geopro-location').html(daoResponse[index].addressSecond);
-             $('.' + daoCurrentGeoPro + ' a.dao-geopro-profilelink').attr('href', 'https://www.daocloud.com/profile/' + daoResponse[index].user.permalink);
-             $('.' + daoCurrentGeoPro + ' .dao-geopro-image img').attr('src', daoResponse[index].user.profileImagePath);
-             $('.' + daoCurrentGeoPro + ' .dao-geopro-image img').attr('alt', 'The DaoCloud Profile Headshot for ' + daoResponse[index].user.fullName);
+           // Check to make sure json response is not null
+           // If response is null, fall back to prodetails object for error handling
+           if (daoResponse.length == 0) {
+             // Assign section heading with userRegion
+             $('.dao-geopro-city').html(proRegion);
+
+             for (index = 0, len = 4; index < len; ++index) {
+               var daoCurrentGeoPro = 'dao-geopro-' + index;
+               $('.' + daoCurrentGeoPro + ' .dao-geopro-name').html(proDetails[index].geoProName);
+               $('.' + daoCurrentGeoPro + ' .dao-geopro-title').html(proDetails[index].geoProTitle);
+               $('.' + daoCurrentGeoPro + ' .dao-geopro-location').html(proDetails[index].geoProLocation);
+               $('.' + daoCurrentGeoPro + ' a.dao-geopro-profilelink').attr('href', proDetails[index].geoProURL);
+               $('.' + daoCurrentGeoPro + ' .dao-geopro-image img').attr('src', proDetails[index].geoProImageURL);
+               $('.' + daoCurrentGeoPro + ' .dao-geopro-image img').attr('alt', 'The DaoCloud Profile Headshot for ' + proDetails[index].geoProName);
+              }
+           }
+           else {
+             // Assign section heading with userRegion
+             $('.dao-geopro-city').html(userRegion);
+
+             // Step 5b
+             // Loop through the json object response (daoResponse) and insert pro info into HTML
+             for (index = 0, len = 4; index < len; ++index) {
+               var daoCurrentGeoPro = 'dao-geopro-' + index;
+               $('.' + daoCurrentGeoPro + ' .dao-geopro-name').html(daoResponse[index].user.fullName);
+               $('.' + daoCurrentGeoPro + ' .dao-geopro-title').html((daoResponse[index].user.professionalTitles).join(', '));
+               $('.' + daoCurrentGeoPro + ' .dao-geopro-location').html(daoResponse[index].addressSecond);
+               $('.' + daoCurrentGeoPro + ' a.dao-geopro-profilelink').attr('href', 'https://www.daocloud.com/profile/' + daoResponse[index].user.permalink);
+               $('.' + daoCurrentGeoPro + ' .dao-geopro-image img').attr('src', daoResponse[index].user.profileImagePath);
+               $('.' + daoCurrentGeoPro + ' .dao-geopro-image img').attr('alt', 'The DaoCloud Profile Headshot for ' + daoResponse[index].user.fullName);
+             }
            }
          },
          error: function() {
-         // Step 5b
+         // Step 5c
          // If dao lookup fails, fall back to static proDetails object for data response
+         $('.dao-geopro-city').html(proRegion);
+
           for (index = 0, len = 4; index < len; ++index) {
             var daoCurrentGeoPro = 'dao-geopro-' + index;
             $('.' + daoCurrentGeoPro + ' .dao-geopro-name').html(proDetails[index].geoProName);
