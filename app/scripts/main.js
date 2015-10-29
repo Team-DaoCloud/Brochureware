@@ -67,10 +67,21 @@ var getUrlParameter = function getUrlParameter(sParam) {
 
 // This function actually sets the cookie itself
 (function($) {
+  function readCookie(name,c,C,i){
+    c = document.cookie.split('; ');
+    var cookies = {};
+    for(i=c.length-1; i>=0; i--){
+      C = c[i].split('=');
+      cookies[C[0]] = C[1];
+    }
+    return cookies[name];
+  }
+
   $(document).ready(function(){
     var infusionAff = getUrlParameter('p');
     if(infusionAff) {
-      setCookie('infusion_referrer', infusionAff, 30);
+      var IS_cookie = readCookie('infusion_referrer');
+      if(!IS_cookie) setCookie('infusion_referrer', infusionAff, 30);
     }
     if(location.hash.slice(1).length > 0) {
       setCookie('dao_ref', location.hash.slice(1), 1);
