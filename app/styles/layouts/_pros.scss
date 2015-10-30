@@ -2,7 +2,7 @@
 // see: components/_banners.scss partial
 // Overrides to the component only here
 .dao-banner-image-content-pros {
-  background: url('../images/banners/pros-bg.jpg') no-repeat top center;
+  background: url('../images/banners/pros-bg.jpg') no-repeat bottom center;
 
   @media (min-width: $screen-sm-min) {
     height: 540px;
@@ -164,9 +164,9 @@ h2.connect-heading {
   color: $brand-gray;
 
 	h2 {
-    color: $brand-dark-gray1;
-    padding: 50px 0;
-  }
+    	color: $brand-dark-gray1;
+    	padding: 50px 0;
+  	}
 
 	.dao-diff-row:nth-child(2) {
 		margin-bottom: 0;
@@ -175,9 +175,14 @@ h2.connect-heading {
 	p {
 		margin-left: 104px;
 
-    @media (min-width: $screen-sm-min) {
-      max-height: 80px;
-    }
+    	@media (min-width: $screen-sm-min) {
+      		max-height: 80px;
+    	}
+	}
+
+	a, a:active, a:visited, a:focus, a:hover {
+		color: $brand-green;
+		text-decoration: underline;
 	}
 
 	.btn-different-cta-kerning {
