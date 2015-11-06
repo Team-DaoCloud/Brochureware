@@ -118,7 +118,7 @@
     <section class="container">
       <div class="dao-explore-container">
         <div class="dao-explore-container-1">
-          <h2 class="dao-explore-title">Connect with Your Personal World of Wellness</h2>
+          <h2 class="dao-explore-title" id="dao-explore-title">Connect with Your Personal World of Wellness</h2>
           <a href="signup">
             <div class="dao-explore-unit dao-explore-unit-1">
               <h3 class="dao-explore-unit-1-title text-pop">Find Trusted Wellness Information</h3>
@@ -151,35 +151,48 @@
 
     <section class="container-fluid">
       <div class="dao-geopro-container">
-        <h2 class="dao-geopro-heading">Discover Local Professionals Near <span class="dao-geopro-city"></span></h2>
-        <div class="dao-geopro dao-geopro-0"><a class="dao-geopro-profilelink" href="">
-          <div class="dao-geopro-image"><img src="" alt="" /></div>
-          <h3 class="dao-geopro-title green-text"></h3>
-          <hr>
-          <div class="dao-geopro-name"></div>
-          <div class="dao-geopro-location"></div>
-        </a></div>
-        <div class="dao-geopro dao-geopro-1"><a class="dao-geopro-profilelink" href="">
-          <div class="dao-geopro-image"><img src="" alt="" /></div>
-          <h3 class="dao-geopro-title green-text"></h3>
-          <hr>
-          <div class="dao-geopro-name"></div>
-          <div class="dao-geopro-location"></div>
-        </a></div>
-        <div class="dao-geopro dao-geopro-2"><a class="dao-geopro-profilelink" href="">
-          <div class="dao-geopro-image"><img src="" alt="" /></div>
-          <h3 class="dao-geopro-title green-text"></h3>
-          <hr>
-          <div class="dao-geopro-name"></div>
-          <div class="dao-geopro-location"></div>
-        </a></div>
-        <div class="dao-geopro dao-geopro-3"><a class="dao-geopro-profilelink" href="">
-          <div class="dao-geopro-image"><img src="" alt="" /></div>
-          <h3 class="dao-geopro-title green-text"></h3>
-          <hr>
-          <div class="dao-geopro-name"></div>
-          <div class="dao-geopro-location"></div>
-        </a></div>
+        <h2 class="dao-geopro-heading" id="dao-geopro-heading">Discover Local Professionals Near <span class="dao-geopro-city"></span></h2>
+        <div id="dao-geopro" class="dao-geopro dao-geopro-0">
+          <a class="dao-geopro-profilelink" href="">
+            <div class="dao-geopro-image"><img src="" alt="" /></div>
+            <h3 class="dao-geopro-title green-text"></h3>
+            <hr>
+            <div class="dao-geopro-name"></div>
+            <div class="dao-geopro-location"></div>
+          </a>
+        </div>
+        <div id="dao-geopro" class="dao-geopro dao-geopro-1">
+          <a class="dao-geopro-profilelink" href="">
+            <div class="dao-geopro-image"><img src="" alt="" /></div>
+            <h3 class="dao-geopro-title green-text"></h3>
+            <hr>
+            <div class="dao-geopro-name"></div>
+            <div class="dao-geopro-location"></div>
+          </a>
+        </div>
+        <div id="dao-geopro" class="dao-geopro dao-geopro-2">
+          <a class="dao-geopro-profilelink" href="">
+            <div class="dao-geopro-image"><img src="" alt="" /></div>
+            <h3 class="dao-geopro-title green-text"></h3>
+            <hr>
+            <div class="dao-geopro-name"></div>
+            <div class="dao-geopro-location"></div>
+          </a>
+        </div>
+        <div id="dao-geopro" class="dao-geopro dao-geopro-3">
+          <a class="dao-geopro-profilelink" href="">
+            <div class="dao-geopro-image"><img src="" alt="" /></div>
+            <h3 class="dao-geopro-title green-text"></h3>
+            <hr>
+            <div class="dao-geopro-name"></div>
+            <div class="dao-geopro-location"></div>
+          </a>
+        </div>
+        <div class="dao-geopro-button">
+          <a href="../../dao-search" class="btn btn-success btn-lg" role="button" target="_blank">
+            <span class="btn-getstarted-cta-kerning">See More Professionals</span>
+          </a>
+        </div>
       </div>
     </section>
 
@@ -285,6 +298,7 @@
     <!-- bower:js -->
     <script src="/bower_components/jquery/dist/jquery.js"></script>
     <script src="/bower_components/Lettering.js/jquery.lettering.js"></script>
+    <script src="/bower_components/waypoints/lib/noframework.waypoints.js"></script>
     <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
@@ -307,6 +321,10 @@
 
     <!-- build:js scripts/signup-form.js -->
     <script src="scripts/signup-form.js"></script>
+    <!-- endbuild -->
+
+        <!-- build:js scripts/waypoint-effects.js -->
+    <script src="scripts/waypoint-effects.js"></script>
     <!-- endbuild -->
   </body>
 </html>

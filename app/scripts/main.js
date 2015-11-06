@@ -1,4 +1,6 @@
 'use strict';
+// Fun little JS thingys for daocloud
+// If it's more than 15-20 lines, break it into a separate file please!
 
 // Sets up lettering.js span targets
 (function($) {
@@ -6,7 +8,10 @@
   $('.btn-cta-kerning').lettering();
   $('.btn-getstarted-cta-kerning').lettering();
   $('.btn-different-cta-kerning').lettering();
+})(jQuery);
 
+// Instantiate modals
+(function($) {
   // Opens the watch video container on DaoCloud's homepage
   $('#toggle-video').click(function(){
     $('#watch-video').modal('toggle');
@@ -18,7 +23,20 @@
   });
 })(jQuery);
 
-// Gives us the current year
+// Bootstrap has a bug where the tab functionality wont fully work
+// I have to manually remove active classes on the terms page tabs
+// Tabs are instantiated via HTML 
+(function($) {
+  $('#term-tabs > li > a.protermslink').on('click', function(){
+    $('#memberterms').removeClass('in active');
+  });
+
+  $('#term-tabs > li > a.membertermslink').on('click', function(){
+    $('#proterms').removeClass('in active');
+  });
+})(jQuery);
+
+// Gives us the current year, print in footer
 (function($) {
   var currentTime = new Date();
   var currentYear = currentTime.getFullYear();
