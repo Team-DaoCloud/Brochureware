@@ -2,19 +2,25 @@
 // Leverages components/_banners.scss
 // overrides only here
 .dao-banner-image-content-affilate {
-  background: url('../images/banners/affiliates-banner.jpg') no-repeat top center;
+  background: url('../images/banners/affiliates-banner-shaded-1900px.jpg') no-repeat top center;
 
-  @media (orientation: portrait) and (min-height: $screen-xs-min) {
-    height: 450px;
+  @media (min-width: $screen-sm-min) {
+    height: 540px;
   }
 }
 
 .dao-banner-text-container.dao-affiliate-title {
 	top: 120px;
 
-	@media (min-width: $screen-xs-min) {
-		top: 160px;
+	@media (min-width: $screen-sm-min) {
+		top: 240px;
 	}
+}
+
+.dao-affiliate-title {
+  .dao-banner-text-secondline {
+    display: block;
+  }
 }
 
 // Section 2 - Pricing Table

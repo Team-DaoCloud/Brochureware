@@ -63,3 +63,12 @@
     margin-left: 4px;
   }
 }
+
+// moves span onto a second line
+.dao-banner-text-secondline {
+  display: block;
+  
+  @media(min-width: $screen-sm-min) {
+    display: inline;
+  }
+}
