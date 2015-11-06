@@ -1,17 +1,48 @@
-.dao-privacy-content {
-  h1 {
-    text-align: center;
-  }
-
+.dao-privacy-tabs {
   margin-top: $base-navbar-offset-mobile;
-  margin-bottom: $base-navbar-offset-mobile;
+  text-align: left;
 
   @media (min-width: $screen-sm-min) {
     margin-top: $base-navbar-offset;
+  }
+
+  // Overriding float:left of default bootstrap tabs
+  .nav-tabs > li {
+    float: none;
+    display: inline-block;
+  }
+
+  .nav-tabs {
+    text-align: center;
+  }
+
+  // Hides 'terms' contents on the tabs for small mobile
+  .hide-content {
+    @media (min-width: $screen-xs-min) {
+      display: inline;
+    }
+  }
+}
+
+.dao-privacy-content {
+  margin-bottom: $base-navbar-offset-mobile;
+
+  @media (min-width: $screen-sm-min) {
     margin-bottom: $base-navbar-offset;
+  }
+
+  h1 {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  h2 {
+    text-align: left;
   }
 
   a, a:active, a:visited, a:focus, a:hover {
     color: $brand-green;
   }
 }
+
+
