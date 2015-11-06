@@ -2,6 +2,7 @@
 // Fun little JS thingys for daocloud
 // If it's more than 15-20 lines, break it into a separate file please!
 
+
 // Sets up lettering.js span targets
 (function($) {
   $('.dao-banner-text-intro').lettering();
@@ -9,6 +10,7 @@
   $('.btn-getstarted-cta-kerning').lettering();
   $('.btn-different-cta-kerning').lettering();
 })(jQuery);
+
 
 // Instantiate modals
 (function($) {
@@ -23,6 +25,7 @@
   });
 })(jQuery);
 
+
 // Bootstrap has a bug where the tab functionality wont fully work
 // I have to manually remove active classes on the terms page tabs
 // Tabs are instantiated via HTML 
@@ -36,12 +39,31 @@
   });
 })(jQuery);
 
+
+(function($) {
+  var linkCheck = $("meta[property='og:url']").attr("content");
+  if (linkCheck === "https://www.daocloud.com/welcome/") {
+    $('.dao-geopro').hide();
+    $('.dao-geopro-button').hide();
+    var waypoint = new Waypoint({
+      element: document.getElementById('dao-geopro-heading'),
+      handler: function(direction) {
+        $('.dao-geopro').fadeIn(1000);
+        $('.dao-geopro-button').fadeIn(1000);
+      },
+      offset: '50%'
+    })
+  }
+})(jQuery);
+
+
 // Gives us the current year, print in footer
 (function($) {
   var currentTime = new Date();
   var currentYear = currentTime.getFullYear();
   $('.current-year').append(currentYear);
 })(jQuery);
+
 
 // Switches visibility on subhead text for 4-up explore section on homepage
 (function($) {
@@ -59,7 +81,8 @@
   });
 })(jQuery);
 
-// This function sets a cookie for InfusionSoft Affiliate tracking that lasts 30 days
+
+// This function sets up a cookie for InfusionSoft Affiliate tracking that lasts 30 days
 function setCookie(cname, cvalue, exdays) {
   var d = new Date();
   d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
@@ -82,6 +105,7 @@ var getUrlParameter = function getUrlParameter(sParam) {
     }
   }
 };
+
 
 // This function actually sets the cookie itself
 (function($) {
