@@ -40,7 +40,10 @@
 })(jQuery);
 
 
+// Waypoints on the home
 (function($) {
+  // Perform check to make sure this script only runs on the homepage
+  // This eliminates an error where the Waypoint object become undefined outside of homepage
   var linkCheck = $("meta[property='og:url']").attr("content");
   if (linkCheck === "https://www.daocloud.com/welcome/") {
     $('.dao-geopro').hide();
