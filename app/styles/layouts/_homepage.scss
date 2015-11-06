@@ -113,70 +113,7 @@
 }
 
 // Section 4 Geolocated Professionals
-.dao-geopro-container {
-  background-color: $brand-dark-white;
-  text-align: center;
-  padding: 30px 0 60px 0;
-
-  .dao-geopro {
-    background-color: $brand-true-white;
-    border-radius: 3px;
-    display: inline-block;
-    min-height: 300px;
-    min-width: 200px;
-    padding: 30px;
-    margin: 10px;
-    vertical-align: top;
-    @include transition(background-color 0.2s ease-in-out);
-
-    @media (min-width: $screen-sm-min) and (max-width: $screen-md-min) {
-      padding: 15px;
-      min-width: 0;
-      width: 160px;
-    }
-
-    a:hover, a:visited, a, a:focus {
-      text-decoration: none;
-    }
-  }
-
-  .dao-geopro:hover {
-    background-color: $brand-light-gray3;
-  }
-
-  hr {
-    width: 50px;
-  }
-
-  h3 {
-    font-size: $norm;
-    min-height: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 130px;
-
-    @media (min-width: $screen-sm-min) and (max-width: $screen-md-min) {
-      min-height: 40px;
-    }
-  }
-
-  img {
-    border-radius: 60px;
-    height: 120px;
-    width: 120px;
-  }
-
-  .dao-geopro-name {
-    font-size: $norm;
-  }
-
-  .dao-geopro-location {
-    color: $brand-gray;
-    font-size: $xsmall;
-    padding-top: 3px;
-    text-transform: uppercase;
-  }
-}
+// see: components/_geopros.scss partial
 
 // Section 5 - Quotes
 // 2 column look, goes to 1 column on mobile
