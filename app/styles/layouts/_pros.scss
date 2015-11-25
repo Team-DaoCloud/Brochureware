@@ -42,6 +42,16 @@
 	}
 }
 
+// Section 3 - Text block
+.dao-text-block-container {
+  background-color: $brand-dark-white;
+  padding: 30px 10px 70px;
+
+  p {
+    text-align: center;
+  }
+}
+
 // Section 3 - Partners Logos
 .partner-logos-container {
   background-color: $brand-dark-white;

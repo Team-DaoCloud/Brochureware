@@ -92,6 +92,16 @@ $grid-columns: 20;
   @include make-sm-column-offset(1);
 }
 
+// Section 3b - text-block
+.text-block-container {
+  @include make-xs-column(16);
+  @include make-xs-column-offset(2);
+  @include make-sm-column(10);
+  @include make-sm-column-offset(5);
+  @include make-lg-column(8);
+  @include make-lg-column-offset(6);
+}
+
 // Section 4 - Geolocated Pros
 // display:inline-block; layout, needed for carousel - leave it loose baby
 
