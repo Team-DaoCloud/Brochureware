@@ -86,4 +86,4 @@ git push heroku-test next-release:master
 
 ### Problems?
 
-Create an issue on this repo and I will look at it.
+Create an issue on this repo and I will look at it. Hopefully, at least ;)
