@@ -61,9 +61,9 @@ $grid-columns: 20;
   @include make-md-column(14);
 }
 
-//######################################
-//############# Index.html #############
-//######################################
+//#########################################
+//############# Page Sections #############
+//#########################################
 // Section 1a - Banner Image,
 // Just one giant, responsive column
 .dao-banner-image-content {
@@ -96,10 +96,8 @@ $grid-columns: 20;
 .text-block-container {
   @include make-xs-column(16);
   @include make-xs-column-offset(2);
-  @include make-sm-column(10);
-  @include make-sm-column-offset(5);
-  @include make-lg-column(8);
-  @include make-lg-column-offset(6);
+  @include make-sm-column(12);
+  @include make-sm-column-offset(4);
 }
 
 // Section 4 - Geolocated Pros
