@@ -238,7 +238,11 @@ h2.connect-heading {
 }
 
 .dao-getstarted-content {
-	h4 {
+  h4 {
+    font-size: $medlarge;
+  }
+
+  h5 {
 		font-size: $norm;
 
 		a, a:active, a:visited, a:focus, a:hover {
