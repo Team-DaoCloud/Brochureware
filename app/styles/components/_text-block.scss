@@ -1,0 +1,17 @@
+// Section 3 - Text block
+// Shows up as a centered block of text on various landing pages
+// As of 4.3.x, pro, ambassador and referral partner pages
+.dao-text-block-container {
+  background-color: $brand-dark-white;
+  padding: 30px 10px 70px;
+  text-align: center;
+
+  p {
+    text-align: center;
+  }
+
+  button {
+    display: block;
+    margin: 30px auto 0 auto;
+  }
+}

@@ -20,6 +20,12 @@
 }
 
 // Section 2 - 3-up Dao Features
+// Override for top container bg color
+.dao-feature-container-top {
+  background-color: $brand-true-white;
+}
+
+
 .dao-feature-icon-ambassador-3 img {
   width: 30px;
 }

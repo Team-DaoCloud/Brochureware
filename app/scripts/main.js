@@ -26,9 +26,17 @@
 })(jQuery);
 
 
+// Ambassadors Page
+// Scroll to bottom of the page
+$("a[href='#bottom']").click(function() {
+  $("html, body").animate({ scrollTop: $(document).height()-$(window).height()}, 1400, "swing");
+  return false;
+});
+
+// Terms Page
 // Bootstrap has a bug where the tab functionality wont fully work
 // I have to manually remove active classes on the terms page tabs
-// Tabs are instantiated via HTML 
+// Tabs are instantiated via HTML
 (function($) {
   $('#term-tabs > li > a.protermslink').on('click', function(){
     $('#memberterms').removeClass('in active');
@@ -40,6 +48,7 @@
 })(jQuery);
 
 
+// Homepage
 // Waypoints on the home
 (function($) {
   // Perform check to make sure this script only runs on the homepage
@@ -60,6 +69,7 @@
 })(jQuery);
 
 
+// Global
 // Gives us the current year, print in footer
 (function($) {
   var currentTime = new Date();
@@ -68,6 +78,7 @@
 })(jQuery);
 
 
+// Homepage
 // Switches visibility on subhead text for 4-up explore section on homepage
 (function($) {
   $('.dao-explore-unit-1').hover(function() {
@@ -85,6 +96,7 @@
 })(jQuery);
 
 
+// Global
 // This function sets up a cookie for InfusionSoft Affiliate tracking that lasts 30 days
 function setCookie(cname, cvalue, exdays) {
   var d = new Date();
