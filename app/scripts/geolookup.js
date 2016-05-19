@@ -12,28 +12,28 @@
       'geoProName': 'Dr. Tracy Freeman',
       'geoProTitle': 'Integrative MD',
       'geoProLocation': 'Washington, DC',
-      'geoProURL': 'https://www.daocloud.com/profile/tracy-freeman',
+      'geoProURL': 'https://www.daocloud.com/profile/tracy-freeman/',
       'geoProImageURL': 'https://s3.amazonaws.com/daocloudapp-prod/resources/picture/profile/blob142228714_thumbnail.'
     },
     {
       'geoProName': 'Dr. Arti Mehta',
       'geoProTitle': 'Naturopathic Doctor',
       'geoProLocation': 'Washington, DC',
-      'geoProURL': 'https://www.daocloud.com/profile/arti-mehta',
+      'geoProURL': 'https://www.daocloud.com/profile/arti-mehta/',
       'geoProImageURL': 'https://s3.amazonaws.com/daocloudapp-prod/resources/picture/profile/arti-mehta1415196346253_thumbnail.jpg'
     },
     {
       'geoProName': 'Dr. Maryjoyce Rotella',
       'geoProTitle': 'Acupuncturist , Chiropractor, Herbalist',
       'geoProLocation': 'Burtonsville, MD',
-      'geoProURL': 'https://www.daocloud.com/profile/maryjoyce-rotella',
+      'geoProURL': 'https://www.daocloud.com/profile/maryjoyce-rotella/',
       'geoProImageURL': 'https://s3.amazonaws.com/daocloudapp-prod/resources/picture/profile/blob141661243_thumbnail.'
     },
     {
       'geoProName': 'Aaron Wallach',
       'geoProTitle': 'Fitness professional',
       'geoProLocation': 'Chevy Chase, MD',
-      'geoProURL': 'https://www.daocloud.com/profile/aaron-wallach',
+      'geoProURL': 'https://www.daocloud.com/profile/aaron-wallach/',
       'geoProImageURL': 'https://s3.amazonaws.com/daocloudapp-prod/resources/picture/profile/photo-on-10-30-14-at-3-47-pm1414698445083_thumbnail.jpg'
     }
   ];
