@@ -68,7 +68,7 @@
            // Check to make sure json response has four pros in it
            // We are checking within a 100 mile radius on the backend
            // If response is null, fall back to prodetails object for error handling
-           if (daoResponse.length < 4) {
+           if (daoResponse.length < 4 || !Array.isArray(daoResponse)) {
              // Assign section heading with userRegion
              $('.dao-geopro-city').html(proRegion);
 
