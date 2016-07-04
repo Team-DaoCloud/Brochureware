@@ -59,7 +59,7 @@
        // Step 4
        // Now we use the lat/lon we retrieved against DaoCloud's endpoint
        $.ajax({
-         url: 'https://www.daocloud.com/api/v1/professional/showroom?lat=' + userLatitude + '&lng=' + userLongitude,
+         url: '/api/v2/professional/showroom?lat=' + userLatitude + '&lng=' + userLongitude,
          type: 'GET',
          dataType: 'json',
          timeout: 3000,
@@ -68,7 +68,7 @@
            // Check to make sure json response has four pros in it
            // We are checking within a 100 mile radius on the backend
            // If response is null, fall back to prodetails object for error handling
-           if (daoResponse.length < 4 || !Array.isArray(daoResponse)) {
+           if (daoResponse.length < 4) {
              // Assign section heading with userRegion
              $('.dao-geopro-city').html(proRegion);
 
@@ -90,12 +90,12 @@
              // Loop through the json object response (daoResponse) and insert pro info into HTML
              for (index = 0, len = 4; index < len; ++index) {
                var daoCurrentGeoPro = 'dao-geopro-' + index;
-               $('.' + daoCurrentGeoPro + ' .dao-geopro-name').html(daoResponse[index].user.fullName);
-               $('.' + daoCurrentGeoPro + ' .dao-geopro-title').html((daoResponse[index].user.professionalTitles).join(', '));
-               $('.' + daoCurrentGeoPro + ' .dao-geopro-location').html(daoResponse[index].addressSecond);
-               $('.' + daoCurrentGeoPro + ' a.dao-geopro-profilelink').attr('href', 'https://www.daocloud.com/profile/' + daoResponse[index].user.permalink);
-               $('.' + daoCurrentGeoPro + ' .dao-geopro-image img').attr('src', daoResponse[index].user.profileImagePath);
-               $('.' + daoCurrentGeoPro + ' .dao-geopro-image img').attr('alt', 'The DaoCloud Profile Headshot for ' + daoResponse[index].user.fullName);
+               $('.' + daoCurrentGeoPro + ' .dao-geopro-name').html(daoResponse[index].value.fullName);
+               $('.' + daoCurrentGeoPro + ' .dao-geopro-title').html((daoResponse[index].value.professionalTitles).join(', '));
+               $('.' + daoCurrentGeoPro + ' .dao-geopro-location').html(daoResponse[index].value.addressSecond);
+               $('.' + daoCurrentGeoPro + ' a.dao-geopro-profilelink').attr('href', 'https://www.daocloud.com/profile/' + daoResponse[index].value.permalink);
+               $('.' + daoCurrentGeoPro + ' .dao-geopro-image img').attr('src', daoResponse[index].value.profileImagePath);
+               $('.' + daoCurrentGeoPro + ' .dao-geopro-image img').attr('alt', 'The DaoCloud Profile Headshot for ' + daoResponse[index].value.fullName);
              }
            }
          },
